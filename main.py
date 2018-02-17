@@ -8,7 +8,7 @@ def stylesheets(filename):
 
 @route('/')
 def hello_world():
-    return redirect("Homepage.html")
+    return redirect("homepage.html")
 
 application = default_app()
 
