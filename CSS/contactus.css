@@ -1,0 +1,56 @@
+header
+{
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("C:/Users/sanjay/Desktop/Project/Images/new.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+.text-center
+{
+ text-align: right;
+  color: #f4d942;
+  font-weight: bold;
+  transform: translate(25%,235%);
+  font-style: italic
+  font-family: tahoma;
+  text-decoration: underline;
+}
+
+.groupnames
+{
+  text-align: left;
+  transform: translate(58%,55%);
+  font-size: 130%;
+  font-weight: bold;
+  color: #79e845;
+}
+
+.logo img
+{
+  width: auto;
+  height: auto;
+  transform: translate(0%,-50%);
+}
+.main-nav
+{
+  list-style: none;
+  float: right;
+  margin-top: -35px;
+  transform: translateX(-10%);
+}
+.main-nav li
+{
+  display: inline-block;
+  margin-left: 70px;
+}
+.main-nav li a:hover
+
+  {
+    color: #e67e22;
+    text-decoration: underline;
+    font-size: 100%;
+    font-weight: bold;
+    margin-top: 10%;
+    transition: all 0.5s ease-in;
+    padding: 15px 0;
+  }
