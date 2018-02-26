@@ -15,7 +15,7 @@ body{
 
 header
 {
-  background-image:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url("C:/Users/sanjay/Desktop/Project/Images/main.png");
+  background-image:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url("../Images/main.png");
   height: 150vh;
   background-position: center#c40310;
   background-size: cover;
