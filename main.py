@@ -1,14 +1,42 @@
 
-# A very simple Bottle Hello World app for you to get started with...
-from bottle import default_app, route, redirect, static_file, get
+from bottle import route, run, debug, template, request, redirect, get, static_file, BaseTemplate
 
 @get('/<filename:re:.*>')
-def stylesheets(filename):
-    return static_file(filename, root='./')
+def getfile(filename):
+    return static_file(filename, root='./static/')
+
+@get('<filename>')
+def getOtherFile(filename):
+    return static_file(filename, root='./static/')
 
 @route('/')
-def hello_world():
-    return redirect("homepage.html")
+def main():
+    output = template('main.tpl')
+    return output
 
-application = default_app()
+@route('/main')
+def redirectmain():
+    return redirect('/')
 
+@route('/gamelore')
+def gamelore():
+    output = template('gamelore.tpl')
+    return output
+
+@route('/gamerule')
+def gamerule():
+    output = template('gamerule.tpl')
+    return output
+
+@route('/gamepage')
+def gamepage():
+    output = template('gamepage.tpl')
+    return output
+
+@route('/contactus')
+def contactus():
+    output = template('contactus.tpl')
+    return output
+
+debug(True)
+run(reloader=True)

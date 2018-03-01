@@ -1,5 +1,3 @@
-<!doctype html>
-<html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -15,7 +13,7 @@
         <img src="Images\logo2.png">
       </div>
       <ul class ="main-nav">
-        <li><a href="main.html">Home Page</a></li>
+        <li><a href="main">Home Page</a></li>
             </ul>
     </div>
     <div class = "title">
@@ -58,9 +56,4 @@
          <button type="button" class="btn btn-outline-primary">Level2</button><br>
          <button type="button" class="btn btn-outline-primary">Level1</button>
        </div>
-
-
-
-
 </body>
-</html>

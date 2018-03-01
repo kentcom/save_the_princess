@@ -1,5 +1,3 @@
-<!doctype html>
-<html lang="en">
 <head>
   <title>KENTCOM-Game Rules</title>
 <link rel="stylesheet" type="text/css" href="CSS/gamerule.css">
@@ -11,8 +9,8 @@
         <img src="Images/logo2.png">
       </div>
       <ul class ="rules-nav">
-        <li><a href="main.html">HOME</a></li>
-        <li><a href="">SIGN IN</a></li>
+        <li><a href="main">HOME</a></li>
+        <li><a href="gamepage">SIGN IN</a></li>
        </ul>
     </div>
 
@@ -62,4 +60,3 @@ If the warrior cannot complete the hurdle, he/she can surrender to the demon.
 </header>
 
 </body>
-</html>

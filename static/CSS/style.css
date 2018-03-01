@@ -22,7 +22,7 @@ body{
 }
 header
 {
-  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../Images/main.png");
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../Images/main.png');
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -80,16 +80,16 @@ h1{
 {
   margin-top:40px;
 }
-.btn-lore
+.btn-lore:hover
 {
   background-color:#e67e22;
   color: white;
-
+  transition: all 1.2s ease-in;
 }
 
 .btn-rules:hover
 {
   background-color: #e67e22;
-  color: #c40310;
+  color: white;
   transition: all 1.2s ease-in;
 }
