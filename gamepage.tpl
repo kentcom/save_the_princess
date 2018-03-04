@@ -42,7 +42,7 @@
      <div class = "lifelines">
        <button type="button" class="btn btn-outline-primary">Even-Steven</button>
        <button type="button" class="btn btn-outline-primary">Flip</button>
-       <button type="button" class="btn btn-outline-primary">Hint</button>
+       <button type="button" class="btn btn-outline-primary">Double Dip</button>
        <button type="button" class="btn btn-outline-primary">Surrender</button></div>
        <div class="levels">
          <button type="button" class="btn btn-outline-primary">Level10</button><br>
