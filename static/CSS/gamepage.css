@@ -116,3 +116,60 @@ left :10%;
   top :35%;
   left:80%;
 }
+
+.blur {
+  background-image:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url("../Images/main.png");
+  background-size: cover;
+  overflow: hidden;
+  filter: blur(13px);
+  position: absolute;
+  height: 300px;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+}
+
+.widget {
+  border-top: 2px solid rgba(255, 255, 255, .5);
+  border-bottom: 2px solid rgba(255, 255, 255, .5);
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0.9;
+  z-index: 10px;
+}
+
+.center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.text {
+  height: 200px;
+  width: 540px;
+}
+
+.text h1 {
+  text-align: center;
+  text-shadow: 1px 1px rgba(0, 0, 0, .1);
+  color: #ffffff;
+  margin-top: 57px;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-size: 38px;
+}
+
+.text p {
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 1px 1px rgba(0, 0, 0, .1);
+  margin-top: 0px;
+  font-family: 'Lato', serif;
+  font-weight: 400;
+  font-size: 22px;
+}
