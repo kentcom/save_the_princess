@@ -30,7 +30,7 @@ is displayed the warrior can take up to five different actions which will be des
 •	Clear the hurdle .<br>
 •	Even-Steven .<br>
 •	Flip .<br>
-•	Hint .<br>
+•	Double Dip .<br>
 •	Surrender to Demon .<br>
 </div><br>
 <div class = "partfour"> Clear the hurdle :</div><br>
@@ -45,9 +45,8 @@ answer choice.<br><br>
 <div class="partsix">Flip : </div><br>
 The current hurdle would be replaced with a new hurdle of similar difficulty.<br><br>
 
-<div class="partseven">Hint :</div><br>
-If the warrior is in a dilemma , then they can go for the “Hint” lifeline, where a hint will be provided to complete
-the hurdle.<br><br>
+<div class="partseven">Double Dip :</div><br>
+If the warrior is in a dilemma , then they can go for the “Double Dip” lifeline, where a warrior can choose two guesses.<br><br>
 
 <div class="parteight">Surrender to Demon : </div><br>
 

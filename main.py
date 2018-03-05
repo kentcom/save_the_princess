@@ -1,5 +1,5 @@
 
-from bottle import route, default_app, debug, template, request, redirect, get, static_file, BaseTemplate
+from bottle import route, run, default_app, debug, template, request, redirect, get, static_file, BaseTemplate
 
 @get('/<filename:re:.*>')
 def getfile(filename):
@@ -38,5 +38,8 @@ def contactus():
     output = template('contactus.tpl')
     return output
 
-debug(True)
-application = default_app()
+if __name__ == "__main__":
+    debug(True)
+    run(reloader=True)
+else:
+    application = default_app()
