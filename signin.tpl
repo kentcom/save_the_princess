@@ -118,7 +118,7 @@
                                 <div class="g-signin2" data-onsuccess="onSignIn"></div>
                             </div>
                             <div class="col-md-3">
-                                <div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="medium"
+                                <div class="fb-login-button" scope="public_profile,email" onclick="checkLoginState();" data-max-rows="1" data-size="medium"
                                     data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>
                                 <div id="status">
                                 </div>
