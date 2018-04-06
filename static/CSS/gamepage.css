@@ -24,7 +24,7 @@ header
  {
 
   text-align: center;
-  color: #c40310;
+  color: #f8d983;
   position: absolute;
   top : 10%;
   left :30%;
@@ -72,14 +72,14 @@ header
 {
   color: #e67e22;
   position: absolute;
-top : 30%;
+top : 20%;
 left :10%;
 }
 .button1
 {
   position: absolute;
   top: 55%;
-  left:15%;
+  left:12%;
 }
 .button2
 {
@@ -91,7 +91,7 @@ left :10%;
 {
   position: absolute;
   top: 65%;
-  left:15%;
+  left:12%;
 }
 .button4
 {

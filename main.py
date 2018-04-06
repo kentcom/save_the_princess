@@ -1,6 +1,6 @@
 
-from bottle import run, default_app, debug, template, request, redirect, get, post, static_file, BaseTemplate, HTTPResponse, HTTPError
-import oauth
+from bottle import run, default_app, debug, template, request, redirect, get, post, static_file, BaseTemplate, HTTPResponse, HTTPError, time
+import oauth, sqlite3
 
 @get('/<filename:re:.*>')
 def getfile(filename):
@@ -29,17 +29,49 @@ def gamerule():
     output = template('gamerule.tpl')
     return output
 
-@get('/gamepage')
-def gamepage():
-    '''
-    conn = sqlite3.connect('./Database/Princess.db')
+
+#Select different level questions: 'EntryLevel', 'MidLevel', 'HighLevel'
+def selectLevelQuestion(level):
+    conn = sqlite3.connect('./Database/princess.db')
     c = conn.cursor()
-    c.execute("select Q.Question,group_concat(O.Options_value) as Options_value from Questions Q , Options O where Q.QuestionID=O.QuestionID and Q.QuestionID=1 GROUP BY Q.Question")
+    c.execute("select count(distinct(Question)) from Questions where GameLevel=?" , (level,))
+    result = c.fetchall()
+    global total
+    for row in result:
+        total = int(row[0])
+        print(total)
+
+    curr_time = int(round(time.time()))
+    rand_value = curr_time % total + 1
+    print(rand_value)
+    #c.execute("update Questions SET Question = 'Who is credited with inventing the first mass produced helicopter?' where QuestionID=4")
+    #conn.commit()
+    c.execute("select QuestionID from Questions where GameLevel=?", (level,))
     result = c.fetchall()
     c.close()
-'''
+    index=1
+    global qid
+    for row in result:
+        if(index == rand_value):
+            qid = int(row[0])
+        index = index + 1
+    return qid
 
-    output = template('gamepage.tpl', rows=result)
+@get('/gamepage')
+def gamepage(qid=2):
+    qid = selectLevelQuestion('MidLevel')
+    conn = sqlite3.connect('./Database/princess.db')
+    c = conn.cursor()
+
+    c.execute("select Q.Question,group_concat(O.Options_value) as Options_value from Questions Q , Options O where Q.QuestionID=O.QuestionID and Q.QuestionID=? GROUP BY Q.Question",(qid,))
+    
+    result = c.fetchall()
+    c.close()
+    global option
+    for row in result:
+        option = row[1].split(',')
+
+    output = template('gamepage.tpl', questions=result, options=option)
     return output
 
 @get('/contactus')
