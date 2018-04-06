@@ -76,8 +76,7 @@
             <div class="widget center">
                 <div class="blur"></div>
                 <div class="text center">
-                    <h1 class="">SAVE THE PRINCESS GAME</h1>
-                    <p>Login</p>
+                    <h3 class="">SAVE THE PRINCESS GAME LOGIN</h3>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-2"></div>

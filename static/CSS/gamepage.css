@@ -151,17 +151,16 @@ left :10%;
 
 .text {
   height: 200px;
-  width: 540px;
+  width: 622px;
 }
 
-.text h1 {
+.text h3 {
   text-align: center;
   text-shadow: 1px 1px rgba(0, 0, 0, .1);
   color: #ffffff;
   margin-top: 57px;
   font-family: 'Lora', serif;
   font-weight: 700;
-  font-size: 38px;
 }
 
 .text p {
