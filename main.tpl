@@ -15,7 +15,7 @@
       </ul>
     </div>
     <div class = "title">
-      <h1> SAVE THE PRINCESS</H1>
+      <h1> SAVE THE PRINCESS</h1>
         <div class="buttonclass">
         <a href="gamelore" class ="btn btn-lore"> Game Lore </a>
         <a href="gamerule" class ="btn btn-rules"> Game Rules </a>

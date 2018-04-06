@@ -10,8 +10,7 @@
   </head>
   <body>
     <header>
-
-      <ul class="card-header">Save The Princess Game Lore
+    <ul class="card-header">SAVE THE PRINCESS GAME LORE
               <li><a href="main">HOME</a></li>
       </ul>
       <br>

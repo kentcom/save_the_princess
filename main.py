@@ -58,8 +58,8 @@ def selectLevelQuestion(level):
     return qid
 
 @get('/gamepage')
-def gamepage(qid=2):
-    qid = selectLevelQuestion('MidLevel')
+def gamepage(qid=1):
+    qid = selectLevelQuestion('EntryLevel')
     conn = sqlite3.connect('./Database/princess.db')
     c = conn.cursor()
 

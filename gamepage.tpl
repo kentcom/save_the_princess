@@ -54,7 +54,7 @@ textarea {
         <img src="Images\logo2.png">
       </div>
       <ul class ="main-nav">
-        <li><a href="main">Home Page</a></li>
+        <li><a href="main">HOME</a></li>
             </ul>
     </div>
     <div class = "title">
