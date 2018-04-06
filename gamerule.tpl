@@ -10,7 +10,7 @@
       </div>
       <ul class ="rules-nav">
         <li><a href="main">HOME</a></li>
-        <li><a href="gamepage">SIGN IN</a></li>
+        <li><a href="signin">SIGN IN</a></li>
        </ul>
     </div>
 
