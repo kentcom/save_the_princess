@@ -1,5 +1,6 @@
 
-from bottle import route, run, default_app, debug, template, request, redirect, get, static_file, BaseTemplate
+from bottle import run, default_app, debug, template, request, redirect, get, post, static_file, BaseTemplate
+import oauth
 
 @get('/<filename:re:.*>')
 def getfile(filename):
@@ -9,34 +10,47 @@ def getfile(filename):
 def getOtherFile(filename):
     return static_file(filename, root='./static/')
 
-@route('/')
+@get('/')
 def main():
     output = template('main.tpl')
     return output
 
-@route('/main')
+@get('/main')
 def redirectmain():
     return redirect('/')
 
-@route('/gamelore')
+@get('/gamelore')
 def gamelore():
     output = template('gamelore.tpl')
     return output
 
-@route('/gamerule')
+@get('/gamerule')
 def gamerule():
     output = template('gamerule.tpl')
     return output
 
-@route('/gamepage')
+@get('/gamepage')
 def gamepage():
     output = template('gamepage.tpl')
     return output
 
-@route('/contactus')
+@get('/contactus')
 def contactus():
     output = template('contactus.tpl')
     return output
+
+@get('/signin')
+def contactus():
+    output = template('signin.tpl')
+    return output
+
+@post('/googlesignin')
+def google():
+    oauth.validateGoogle()
+
+@post('/facebooksignin')
+def facebook():
+    oauth.validateFacebook()
 
 if __name__ == "__main__":
     debug(True)

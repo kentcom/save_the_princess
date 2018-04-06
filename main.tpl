@@ -10,7 +10,7 @@
       </div>
       <ul class ="main-nav">
         <li><a href="">KENTCOM</a></li>
-        <li><a href="gamepage">SIGN IN</a></li>
+        <li><a href="signin">SIGN IN</a></li>
         <li><a href="contactus">CONTACT US</a></li>
       </ul>
     </div>
