@@ -33,12 +33,12 @@ def gamerule():
 def gamepage():
     conn = sqlite3.connect('./Database/Princess.db')
     c = conn.cursor()
-    c.execute("SELECT * FROM Princess WHERE ")
+    c.execute("select Q.Question,group_concat(O.Options_value) as Options_value from Questions Q , Options O where Q.QuestionID=O.QuestionID and Q.QuestionID=1 GROUP BY Q.Question")
     result = c.fetchall()
     c.close()
 
 
-    output = template('gamepage.tpl', data=result)
+    output = template('gamepage.tpl', rows=result)
     return output
 
 @get('/contactus')

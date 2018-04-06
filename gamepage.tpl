@@ -21,24 +21,29 @@
     </div>
 
     <div class = "container">
+      %for row in rows:
+         
       <div class = "label">
-        <label for="Question">Question No </label>
-        <input type="text" style="width:30px;" name="qno"maxlength="2"/><br><br>
-        <textarea rows="3" cols = "100"></textarea>
+        <label for="Question">QUESTION </label>
+        <!--<input type="text" style="width:30px;" name="qno"maxlength="2"/>-->
+        <br>
+        <textarea rows="5" cols = "100">{{row[0]}}</textarea>
     </div>
+      
       <div class="button1">
-        <button type="button" class="btn btn-outline-primary">option1</button></div>
+        <button type="button" class="btn btn-outline-primary">{{row[1][0]}}</button></div>
       <div class="button2">
-        <button type="button" class="btn btn-outline-primary">option2</button></div>
+        <button type="button" class="btn btn-outline-primary">{{row[1][1]}}</button></div>
       <div class="button3">
-        <button type="button" class="btn btn-outline-primary">option3</button></div>
+        <button type="button" class="btn btn-outline-primary">{{row[1][2]}}</button></div>
       <div class = "button4">
-        <button type="button" class="btn btn-outline-primary">option4</button>
+        <button type="button" class="btn btn-outline-primary">{{row[1][3]}}</button>
       </div><br><br>
-     <div class="hint">
+      %end
+     <!--<div class="hint">
        <label for="hint">Hint: </label><br>
        <textarea rows="1" cols = "100"></textarea>
-     </div>
+     </div>-->
      <div class = "lifelines">
        <button type="button" class="btn btn-outline-primary">Even-Steven</button>
        <button type="button" class="btn btn-outline-primary">Flip</button>
