@@ -14,10 +14,10 @@
                 data: JSON.stringify(jsondata),
                 type: 'POST',
                 success: function (response) {
-                    window.location.replace("https://kentcom.pythonanywhere.com/gamepage");
+                  window.location.replace("https://kentcom.pythonanywhere.com/gamepage");
                 },
                 error: function (error) {
-                    window.location.replace("https://kentcom.pythonanywhere.com/error");
+                  window.location.replace("https://kentcom.pythonanywhere.com");
                 }
             });
         }
@@ -32,14 +32,14 @@
                         data: JSON.stringify(response),
                         type: 'POST',
                         success: function (response) {
-                            window.location.replace("https://kentcom.pythonanywhere.com/gamepage");
+                          window.location.replace("https://kentcom.pythonanywhere.com/gamepage");
                         },
                         error: function (error) {
-                            window.location.replace("https://kentcom.pythonanywhere.com/error");
+                          window.location.replace("https://kentcom.pythonanywhere.com");
                         }
                     });
                 } else {
-                    window.location.replace("https://kentcom.pythonanywhere.com/");
+                    window.location.replace("https://kentcom.pythonanywhere.com");
                 }
 		  });
 		}
@@ -85,7 +85,7 @@
                                 <div class="g-signin2" data-onsuccess="onSignIn"></div>
                             </div>
                             <div class="col-md-3">
-                                <div class="fb-login-button" scope="public_profile,email" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true" onlogin="checkLoginState();"></div>
+                                <div class="fb-login-button" scope="public_profile,email" return_scopes="true" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-use-continue-as="true" onlogin="checkLoginState();"></div>
                                 <div class="col-md-2"></div>
                             </div>
                         </div>

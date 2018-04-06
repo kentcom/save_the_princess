@@ -1,5 +1,5 @@
 
-from bottle import run, default_app, debug, template, request, redirect, get, post, static_file, BaseTemplate
+from bottle import run, default_app, debug, template, request, redirect, get, post, static_file, BaseTemplate, HTTPResponse, HTTPError
 import oauth
 
 @get('/<filename:re:.*>')
@@ -31,12 +31,13 @@ def gamerule():
 
 @get('/gamepage')
 def gamepage():
+    '''
     conn = sqlite3.connect('./Database/Princess.db')
     c = conn.cursor()
     c.execute("select Q.Question,group_concat(O.Options_value) as Options_value from Questions Q , Options O where Q.QuestionID=O.QuestionID and Q.QuestionID=1 GROUP BY Q.Question")
     result = c.fetchall()
     c.close()
-
+'''
 
     output = template('gamepage.tpl', rows=result)
     return output
@@ -53,11 +54,17 @@ def contactus():
 
 @post('/googlesignin')
 def google():
-    oauth.validateGoogle()
+    if oauth.validateGoogle():
+        return HTTPResponse(body='', status=200, headers=None)
+    else:
+        return HTTPError(status=500, body=None, exception=None, traceback=None)
 
 @post('/facebooksignin')
 def facebook():
-    oauth.validateFacebook()
+    if oauth.validateFacebook():
+        return HTTPResponse(status=200)
+    else:
+        return HTTPError(status=500)
 
 if __name__ == "__main__":
     debug(True)
