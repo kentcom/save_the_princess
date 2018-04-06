@@ -30,7 +30,14 @@ def gamerule():
 
 @route('/gamepage')
 def gamepage():
-    output = template('gamepage.tpl')
+    conn = sqlite3.connect('./Database/Princess.db')
+    c = conn.cursor()
+    c.execute("SELECT * FROM Princess WHERE ")
+    result = c.fetchall()
+    c.close()
+
+
+    output = template('gamepage.tpl', data=result)
     return output
 
 @route('/contactus')
