@@ -21,6 +21,8 @@ def validateGoogle():
 def validateFacebook():
     try:
         dict_data = request.json
+        print(str(dict_data['authResponse']['userID']))
+        manageUserInfo(str(dict_data['authResponse']['userID']))
         return True
     except ValueError:
         return False
