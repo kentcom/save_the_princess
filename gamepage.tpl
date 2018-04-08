@@ -7,8 +7,8 @@
 <link rel="stylesheet" type="text/css" href="CSS/gamepage.css">
 <style type="text/css">
 textarea {
- width: 1100px;
- height: 250px;
+ width: 260%;
+ height: 100%;
  background-color: white;
  font-size: 1.5em;
  font-weight: bold;
@@ -18,7 +18,7 @@ textarea {
  padding: 10px;
 }
 .butn {
-    background-color: #4CAF50; /* Green */
+    background-color: #ffffff; /* Green */
     border: none;
     color: white;
     padding: 10px;
@@ -62,26 +62,28 @@ textarea {
     </div>
 
     <div class = "container">
+    <div class = "row">
       %for row in questions:   
       <div class = "label">
         <label for="Question" style="font-size:25px;">QUESTION </label>
         <!--<input type="text" style="width:30px;" name="qno"maxlength="2"/>-->
         <br>
         
-        <textarea disabled>{{row[0]}}</textarea>
+        <textarea disabled rows="5" cols="20">{{row[0]}}</textarea>
         <br><br>
         <label for="Options" style="font-size:25px;">CLICK ON THE CORRECT OPTION </label>
     </div>
       %end
-     
+     </div>
+     </div>
       <div class="button1">
-        <button type="button" class="butn btn-outline-primary" >{{options[0]}}</button></div>
+        <button type="button" class="butn btn-outline-primary" ><a href = "">{{options[0]}}</a></button></div>
       <div class="button2">
-        <button type="button" class="butn btn-outline-primary">{{options[1]}}</button></div>
+        <button type="button" class="butn btn-outline-primary"><a href = "">{{options[1]}}</a></button></div>
       <div class="button3">
-        <button type="button" class="butn btn-outline-primary">{{options[2]}}</button></div>
+        <button type="button" class="butn btn-outline-primary"><a href = "">{{options[2]}}</a></button></div>
       <div class = "button4">
-        <button type="button" class="butn btn-outline-primary">{{options[3]}}</button></div>
+        <button type="button" class="butn btn-outline-primary"><a href = "">{{options[3]}}</a></button></div>
       <br><br>
       
      <!--<div class="hint">
@@ -89,10 +91,19 @@ textarea {
        <textarea rows="1" cols = "100"></textarea>
      </div>-->
      <div class = "lifelines">
-       <button type="button" class="btn btn-outline-primary" style="background-color: #9A5280;color: #ffff; width:120px;height:50px">Even-Steven</button>
-       <button type="button" class="btn btn-outline-primary" style="background-color: #9A5280;color: #ffff; width:120px;height:50px">Flip</button>
-       <button type="button" class="btn btn-outline-primary" style="background-color: #9A5280;color: #ffff; width:120px;height:50px">Double Dip</button>
-       <button type="button" class="btn btn-outline-primary" style="background-color: #9A5280;color: #ffff; width:120px;height:50px">Surrender</button></div>
+       <div class = "label">
+        <label for="Lifelines" style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LIFE LINES</label>
+       </div>
+       <br/><br/><br/>
+       <button type="button" class="btn btn-outline-primary" style="background-color: #9A5280;color: #ffff; width:120px;height:50px">Even-Steven</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <button type="button" class="btn btn-outline-primary" style="background-color: #9A5280;color: #ffff; width:120px;height:50px">Flip</button><br/><br/>
+       <button type="button" class="btn btn-outline-primary" style="background-color: #9A5280;color: #ffff; width:120px;height:50px">Double Dip</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <button type="button" class="btn btn-outline-primary" style="background-color: #9A5280;color: #ffff; width:120px;height:50px">Surrender</button>
+       <div class = "label">
+       <br/><br/><br/><br/><br/><br/><br/><br/>
+        <label for="Lifelines" style="font-size:20px;">YOUR CURRENT LEVEL</label>
+       </div>
+       </div>
        <div class="levels">
          <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level10</button><br>
          <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level9</button><br>
@@ -103,6 +114,6 @@ textarea {
          <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level4</button><br>
          <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level3</button><br>
          <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level2</button><br>
-         <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level1</button>
+         <button type="button" class="btn btn-outline-primary" style="background-color: #0000ff;color: #ffff; width:90px">Level1</button>
        </div>
 </body>

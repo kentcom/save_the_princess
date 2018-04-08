@@ -1,6 +1,6 @@
 
 from bottle import run, default_app, debug, template, request, redirect, get, post, static_file, BaseTemplate, HTTPResponse, HTTPError, time
-import oauth, sqlite3
+import sqlite3
 
 @get('/<filename:re:.*>')
 def getfile(filename):
