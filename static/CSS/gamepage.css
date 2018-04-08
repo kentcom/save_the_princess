@@ -16,8 +16,8 @@ body{
 header
 {
   background-image:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url("../Images/main.png");
-  height: 150vh;
-  background-position: center#c40310;
+  height: 100%;
+  background-position: center;
   background-size: cover;
 }
  .title h2

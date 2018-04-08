@@ -1,9 +1,12 @@
+body{
+  width: 100%;
+}
 header
 {
   background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("../Images/new.jpg");
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
 }
 .text-center
 {
@@ -11,7 +14,7 @@ header
   color: #f4d942;
   font-weight: bold;
   transform: translate(25%,235%);
-  font-style: italic
+  font-style: italic;
   font-family: tahoma;
   text-decoration: underline;
 }

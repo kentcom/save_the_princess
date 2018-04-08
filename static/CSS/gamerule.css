@@ -13,13 +13,14 @@ body{
   font-family: tahoma;
 }
 
-header
-{
-  background-image:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url("../Images/main.png");
-  height: 150vh;
-  background-position: center#f8d983;
+html { 
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../Images/main.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
+
  h2
  {
 
@@ -36,7 +37,7 @@ header
 {
   list-style: none;
   float: right;
-  margin-top: 20px;
+  margin-top: 18px;
 }
 .rules-nav li
 {
@@ -75,7 +76,7 @@ position: absolute;
 top: 20%;
 font-family: Verdana, Arial, Helvetica, sans-serif;
 font-size: 1.4em;
-color:#adc2bd;
+color:#c9dfda;
 }
 
 .partone
