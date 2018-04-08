@@ -1,6 +1,6 @@
 
 from bottle import run, default_app, debug, template, request, redirect, get, post, static_file, BaseTemplate, HTTPResponse, HTTPError, time
-import sqlite3
+import sqlite3, oauth
 
 @get('/<filename:re:.*>')
 def getfile(filename):
@@ -64,7 +64,7 @@ def gamepage(qid=1):
     c = conn.cursor()
 
     c.execute("select Q.Question,group_concat(O.Options_value) as Options_value from Questions Q , Options O where Q.QuestionID=O.QuestionID and Q.QuestionID=? GROUP BY Q.Question",(qid,))
-    
+
     result = c.fetchall()
     c.close()
     global option
