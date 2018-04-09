@@ -115,4 +115,4 @@ if __name__ == "__main__":
     debug(True)
     bottle.run(app=app, host='localhost',port=8080, reloader=True)
 else:
-    app = SessionMiddleware(default_app(), session_opts)
+    application = SessionMiddleware(default_app(), session_opts)
