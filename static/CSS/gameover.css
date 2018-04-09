@@ -1,0 +1,105 @@
+*
+{
+  margin:0;
+  padding:0;
+}
+
+.row
+{
+  max-width:1140px;
+  margin:0 auto;
+}
+body{
+  font-family: tahoma;
+}
+.title
+{
+  position:absolute;
+  width : 1140px;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+html { 
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('../Images/over.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+h1{
+  color: white;
+  font-size: 40px;
+  align: center;
+}
+
+.main-nav
+{
+  list-style: none;
+  float: right;
+  margin-top: 10px;
+}
+.main-nav li
+{
+  display: inline-block;
+  margin-left: 205px;
+}
+.main-nav li a
+{
+  color: #e67e22;
+  text-decoration: none;
+  font-size: 120%;
+  font-weight: bold;
+  margin-top: 20%;
+}
+
+.logo img{
+  height :90px;
+  float: left;
+  margin-top:10px;
+  transform: translate(-70%,10%);
+}
+
+.main-nav li a:hover
+{
+  color: #e67e22;
+  border-bottom: 2px solid  #e67e22;
+  transition: all 0.5s ease-in;
+  padding: 15px 0;
+}
+
+.btn
+{
+  border :1px solid #e67e22;
+  padding :10px 30px;
+  color: #e67e22;
+  text-decoration: none;
+  border-radius: 12px;
+  background-color:linear-gradient(rgba(0,0,0,0.7),rgba(0, 0, 0, 0.7)),url("new.jpg");
+  margin-right: 15px;
+}
+.buttonclass
+{
+  margin-top:40px;
+  font-size: 28px;
+  align: center;
+
+}
+h1{
+  color: white;
+  font-size: 20px;
+  align: center;
+}
+.btn-quit:hover
+{
+  background-color:#e67e22;
+  color: white;
+  transition: all 1.2s ease-in;
+}
+
+.btn-startagain:hover
+{
+  background-color: #e67e22;
+  color: white;
+  transition: all 1.2s ease-in;
+}
