@@ -1,6 +1,14 @@
-
+import bottle
 from bottle import run, default_app, debug, template, request, redirect, get, post, static_file, BaseTemplate, HTTPResponse, HTTPError, time
 import sqlite3, oauth
+from beaker.middleware import SessionMiddleware
+
+session_opts = {
+    'session.type': 'file',
+    'session.cookie_expires': 300,
+    'session.data_dir': './data',
+    'session.auto': True
+}
 
 @get('/<filename:re:.*>')
 def getfile(filename):
@@ -59,6 +67,10 @@ def selectLevelQuestion(level):
 
 @get('/gamepage')
 def gamepage(qid=1):
+    session = bottle.request.environ.get('beaker.session')
+    game_user = session.get('game_user')
+    if game_user is None:
+        return redirect("/")
     qid = selectLevelQuestion('EntryLevel')
     conn = sqlite3.connect('./Database/princess.db')
     c = conn.cursor()
@@ -99,7 +111,8 @@ def facebook():
         return HTTPError(status=500)
 
 if __name__ == "__main__":
+    app = SessionMiddleware(bottle.app(), session_opts)
     debug(True)
-    run(reloader=True)
+    bottle.run(app=app, host='localhost',port=8080, reloader=True)
 else:
-    application = default_app()
+    app = SessionMiddleware(default_app(), session_opts)
