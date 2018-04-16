@@ -9,7 +9,7 @@ conn.execute("DROP TABLE if exists Options")
 
 conn.execute("CREATE TABLE User (UserID INTEGER PRIMARY KEY AUTOINCREMENT, EmailAddress nvarchar(300) , CurrentGameLevel char(1000) )")
 
-conn.execute("CREATE TABLE GameHistory (UserID INTEGER PRIMARY KEY AUTOINCREMENT , QuestionID INTEGER)")
+conn.execute("CREATE TABLE GameHistory (UserID INTEGER PRIMARY KEY , QuestionID INTEGER)")
 
 conn.execute("CREATE TABLE Questions (QuestionID INTEGER PRIMARY KEY,Question nvarchar(500)  , GameLevel char(1000) )")
 
@@ -98,7 +98,7 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (39,'W
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (40,'What is software testing?','MidLevel')")
 
-
+'''
 conn.execute("Insert into GameHistory(QuestionID) values (1)")
 conn.execute("Insert into GameHistory(QuestionID) values (2)")
 conn.execute("Insert into GameHistory(QuestionID) values (3)")
@@ -139,6 +139,7 @@ conn.execute("Insert into GameHistory(QuestionID) values (37)")
 conn.execute("Insert into GameHistory(QuestionID) values (38)")
 conn.execute("Insert into GameHistory(QuestionID) values (39)")
 conn.execute("Insert into GameHistory(QuestionID) values (40)")
+'''
 
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',1,'Moth')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',1,'Cockroach')")
