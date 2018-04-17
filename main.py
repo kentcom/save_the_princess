@@ -75,15 +75,18 @@ def gamepage(qid=1):
     conn = sqlite3.connect('./Database/princess.db')
     c = conn.cursor()
 
-    c.execute("select Q.Question,group_concat(O.Options_value) as Options_value from Questions Q , Options O where Q.QuestionID=O.QuestionID and Q.QuestionID=? GROUP BY Q.Question",(qid,))
+    c.execute("select Q.QuestionID,Q.Question,group_concat(O.Options_value) as Options_value, (select Options_value from Options WHERE OptionID = A.CorrectOptionID and QuestionID = Q.QuestionID) AS CorrectOption from Questions Q , Options O, Answers A where Q.QuestionID=O.QuestionID and Q.QuestionID=A.QuestionID and Q.QuestionID=? GROUP BY Q.Question",(qid,))
 
     result = c.fetchall()
     c.close()
-    global option
+    global questionID, question, option, correctOption
     for row in result:
-        option = row[1].split(',')
+        questionID = row[0]
+        question = row[1]
+        option = row[2].split(',')
+        correctOption = row[3]
 
-    output = template('gamepage.tpl', questions=result, options=option)
+    output = template('gamepage.tpl', questionID=questionID, question=question, options=option, correctOption=correctOption)
     return output
 
 @get('/contactus')

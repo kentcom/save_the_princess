@@ -49,10 +49,6 @@
       width: 200px;
       height: 50px;
     }
-
-    a {
-      color: #FFFFFF;
-    }
   </style>
 </head>
 
@@ -74,37 +70,27 @@
 
     <div class="container">
       <div class="row">
-        %for row in questions:
         <div class="label">
           <label for="Question" style="font-size:25px;">QUESTION </label>
           <!--<input type="text" style="width:30px;" name="qno"maxlength="2"/>-->
           <br>
-          <textarea disabled rows="5" cols="20">{{row[0]}}</textarea>
+          <textarea disabled rows="5" cols="20">{{question}}</textarea>
           <br>
           <label for="Options" style="font-size:25px;">CLICK ON THE CORRECT OPTION </label>
         </div>
-        %end
       </div>
     </div>
     <div class="button1">
-      <button type="button" class="butn btn-outline-primary">
-        <a href="">{{options[0]}}</a>
-      </button>
+      <input type="button" id="option_A" value="{{options[0]}}" class="butn btn-outline-primary">
     </div>
     <div class="button2">
-      <button type="button" class="butn btn-outline-primary">
-        <a href="">{{options[1]}}</a>
-      </button>
+      <input type="button" id="option_B" value="{{options[1]}}" class="butn btn-outline-primary">
     </div>
     <div class="button3">
-      <button type="button" class="butn btn-outline-primary">
-        <a href="">{{options[2]}}</a>
-      </button>
+      <input type="button" id="option_C" value="{{options[2]}}" class="butn btn-outline-primary">
     </div>
     <div class="button4">
-      <button type="button" class="butn btn-outline-primary">
-        <a href="">{{options[3]}}</a>
-      </button>
+      <input type="button" id="option_D" value="{{options[3]}}" class="butn btn-outline-primary">
     </div>
     <br>
     <br>
