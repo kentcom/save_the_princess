@@ -66,7 +66,7 @@ def selectLevelQuestion(level):
     return qid
 
 
-def addToHistoryTable():
+def addToHistoryTable(userID, questionID):
     conn = sqlite3.connect('./Database/princess.db')
     c = conn.cursor()
     c.execute("INSERT INTO GameHistory values(?, ?)",(game_user, questionID))
@@ -74,10 +74,10 @@ def addToHistoryTable():
     c.close()
     
 
-def retrieveHistoryTable():
+def retrieveHistoryTable(userID):
     conn = sqlite3.connect('./Database/princess.db')
     c = conn.cursor()
-    c.execute("SELECT count(QuestionID) from GameHistory where UserID=?",(game_user))
+    c.execute("SELECT count(QuestionID) from GameHistory where UserID=?",(userID))
     result = c.fetchall()
     c.close()
     global rowCount
@@ -110,7 +110,16 @@ def gamepage(qid=1):
         option = row[2].split(',')
         correctOption = row[3]
 
-    rows = retrieveHistoryTable()
+    #get userid from DB
+    c = conn.cursor()
+    c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
+    result = c.fetchall()
+    c.close()
+    global userid
+    for row in result:
+        userid = row[0]
+
+    rows = retrieveHistoryTable(userid)
     output = template('gamepage.tpl', questionID=questionID, question=question, options=option, correctOption=correctOption, rows1=rows)
     return output
 
@@ -136,8 +145,18 @@ def validateAnswer():
         for row in result:
             CorrectOption = row[1]
         selectedOption = str(dict_data['selectedAnswer'])
+
+        #get userid from DB
+        c = conn.cursor()
+        c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
+        result = c.fetchall()
+        c.close()
+        global userid
+        for row in result:
+            userid = row[0]
+
         if CorrectOption == selectedOption:
-            addToHistoryTable()
+            addToHistoryTable(userid, questionID)
             return HTTPResponse(status=200)
         else:
             return HTTPResponse(status=500)
