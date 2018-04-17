@@ -65,6 +65,28 @@ def selectLevelQuestion(level):
         index = index + 1
     return qid
 
+
+def addToHistoryTable():
+    conn = sqlite3.connect('./Database/princess.db')
+    c = conn.cursor()
+    c.execute("INSERT INTO GameHistory values(?, ?)",(game_user, questionID))
+    c.commit()
+    c.close()
+    
+
+def retrieveHistoryTable():
+    conn = sqlite3.connect('./Database/princess.db')
+    c = conn.cursor()
+    c.execute("SELECT count(QuestionID) from GameHistory where UserID=?",(game_user))
+    result = c.fetchall()
+    c.close()
+    global rowCount
+    for row in result:
+        rowCount = row[0]
+    print("Total questions inserted = " + rowCount)
+    return rowCount
+
+
 @get('/gamepage')
 def gamepage(qid=1):
     session = bottle.request.environ.get('beaker.session')
@@ -79,7 +101,7 @@ def gamepage(qid=1):
 
     result = c.fetchall()
     c.close()
-    global questionID, question, option, correctOption
+    global questionID, question, option, correctOption, rows
     for row in result:
         questionID = row[0]
         session['questionID'] = questionID
@@ -88,8 +110,10 @@ def gamepage(qid=1):
         option = row[2].split(',')
         correctOption = row[3]
 
-    output = template('gamepage.tpl', questionID=questionID, question=question, options=option, correctOption=correctOption)
+    rows = retrieveHistoryTable()
+    output = template('gamepage.tpl', questionID=questionID, question=question, options=option, correctOption=correctOption, rows1=rows)
     return output
+
 
 @post('/gamepage')
 def validateAnswer():
@@ -113,6 +137,7 @@ def validateAnswer():
             CorrectOption = row[1]
         selectedOption = str(dict_data['selectedAnswer'])
         if CorrectOption == selectedOption:
+            addToHistoryTable()
             return HTTPResponse(status=200)
         else:
             return HTTPResponse(status=500)
