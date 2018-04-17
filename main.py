@@ -72,18 +72,20 @@ def addToHistoryTable(userID, questionID):
     c.execute("INSERT INTO GameHistory values(?, ?)",(game_user, questionID))
     c.commit()
     c.close()
-    
+
 
 def retrieveHistoryTable(userID):
     conn = sqlite3.connect('./Database/princess.db')
     c = conn.cursor()
-    c.execute("SELECT count(QuestionID) from GameHistory where UserID=?",(userID))
+    c.execute("SELECT count(QuestionID) from GameHistory where UserID=?",(userID,))
     result = c.fetchall()
     c.close()
     global rowCount
-    for row in result:
-        rowCount = row[0]
-    print("Total questions inserted = " + rowCount)
+    rowCount = 0
+    if(result != None):
+        for row in result:
+            rowCount = int(row[0])
+    print("Total questions inserted = " + str(rowCount))
     return rowCount
 
 
