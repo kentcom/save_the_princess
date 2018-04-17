@@ -63,10 +63,10 @@
                 data: JSON.stringify(jsondata),
                 type: 'POST',
                 success: function (response) {
-                  window.location.replace("http://localhost:8080/gamepage");
+                  window.location.replace("https://kentcom.pythonanywhere.com/gamepage");
                 },
                 error: function (error) {
-                  window.location.replace("http://localhost:8080/gameover");
+                  window.location.replace("https://kentcom.pythonanywhere.com/gameover");
                 }
             });
         }
