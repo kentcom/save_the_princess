@@ -82,11 +82,46 @@ def gamepage(qid=1):
     global questionID, question, option, correctOption
     for row in result:
         questionID = row[0]
+        session['questionID'] = questionID
+        session.save()
         question = row[1]
         option = row[2].split(',')
         correctOption = row[3]
 
     output = template('gamepage.tpl', questionID=questionID, question=question, options=option, correctOption=correctOption)
+    return output
+
+@post('/gamepage')
+def validateAnswer():
+    try:
+        dict_data = request.json
+        session = bottle.request.environ.get('beaker.session')
+        questionID = session['questionID']
+        if questionID is None:
+            return HTTPResponse(status=500)
+        game_user = session.get('game_user')
+        if game_user is None:
+            return HTTPResponse(status=500)
+        conn = sqlite3.connect('./Database/princess.db')
+        c = conn.cursor()
+        c.execute("select Q.QuestionID, (select Options_value from Options WHERE OptionID = A.CorrectOptionID and QuestionID = Q.QuestionID) AS CorrectOption from Questions Q , Options O, Answers A where Q.QuestionID=O.QuestionID and Q.QuestionID=A.QuestionID and Q.QuestionID=? GROUP BY Q.Question",(questionID,))
+        result = c.fetchall()
+        c.close()
+        print(str(dict_data['selectedAnswer']))
+        global CorrectOption
+        for row in result:
+            CorrectOption = row[1]
+        selectedOption = str(dict_data['selectedAnswer'])
+        if CorrectOption == selectedOption:
+            return HTTPResponse(status=200)
+        else:
+            return HTTPResponse(status=500)
+    except ValueError:
+        return HTTPResponse(status=500)
+
+@get('/gameover')
+def gameover():
+    output = template('gameover.tpl')
     return output
 
 @get('/contactus')

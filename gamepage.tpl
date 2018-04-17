@@ -3,6 +3,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <title>KENTCOM-Game Page</title>
   <link rel="stylesheet" type="text/css" href="CSS/gamepage.css">
   <style type="text/css">
@@ -50,6 +51,26 @@
       height: 50px;
     }
   </style>
+
+  <script>
+        function validateAnswer(elem) {
+			      var selectedID = elem.id;
+            var selectedAnswer = document.getElementById(selectedID).value;
+            var jsondata = { "selectedAnswer": selectedAnswer }
+            $.ajax({
+                url: '/gamepage',
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(jsondata),
+                type: 'POST',
+                success: function (response) {
+                  window.location.replace("http://localhost:8080/gamepage");
+                },
+                error: function (error) {
+                  window.location.replace("http://localhost:8080/gameover");
+                }
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -81,16 +102,16 @@
       </div>
     </div>
     <div class="button1">
-      <input type="button" id="option_A" value="{{options[0]}}" class="butn btn-outline-primary">
+      <input type="button" id="option_A" value="{{options[0]}}" onclick="validateAnswer(this)" class="butn btn-outline-primary">
     </div>
     <div class="button2">
-      <input type="button" id="option_B" value="{{options[1]}}" class="butn btn-outline-primary">
+      <input type="button" id="option_B" value="{{options[1]}}" onclick="validateAnswer(this)" class="butn btn-outline-primary">
     </div>
     <div class="button3">
-      <input type="button" id="option_C" value="{{options[2]}}" class="butn btn-outline-primary">
+      <input type="button" id="option_C" value="{{options[2]}}" onclick="validateAnswer(this)" class="butn btn-outline-primary">
     </div>
     <div class="button4">
-      <input type="button" id="option_D" value="{{options[3]}}" class="butn btn-outline-primary">
+      <input type="button" id="option_D" value="{{options[3]}}" onclick="validateAnswer(this)" class="butn btn-outline-primary">
     </div>
     <br>
     <br>
