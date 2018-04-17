@@ -52,8 +52,11 @@ def selectLevelQuestion(level):
     curr_time = int(round(time.time()))
     rand_value = curr_time % total + 1
     print(rand_value)
-    #c.execute("update Questions SET Question = 'Who is credited with inventing the first mass produced helicopter?' where QuestionID=4")
+    #c.execute("update Questions SET Question = 'Which of the following landlocked countries is entirely contained within another country?' where QuestionID=3")
+    #c.execute("CREATE TABLE GameHistory (UserID INTEGER, QuestionID INTEGER)")
     #conn.commit()
+    #print("Table created")
+    #print("question updated")
     c.execute("select QuestionID from Questions where GameLevel=?", (level,))
     result = c.fetchall()
     c.close()
@@ -69,8 +72,8 @@ def selectLevelQuestion(level):
 def addToHistoryTable(userID, questionID):
     conn = sqlite3.connect('./Database/princess.db')
     c = conn.cursor()
-    c.execute("INSERT INTO GameHistory values(?, ?)",(game_user, questionID))
-    c.commit()
+    c.execute("INSERT INTO GameHistory values(?, ?)",(userID, questionID,))
+    conn.commit()
     c.close()
 
 
@@ -85,7 +88,7 @@ def retrieveHistoryTable(userID):
     if(result != None):
         for row in result:
             rowCount = int(row[0])
-    print("Total questions inserted = " + str(rowCount))
+    print("Total questions Answered = " + str(rowCount))
     return rowCount
 
 
@@ -121,6 +124,7 @@ def gamepage(qid=1):
     for row in result:
         userid = row[0]
 
+    print("UserID = " + str(userid))
     rows = retrieveHistoryTable(userid)
     output = template('gamepage.tpl', questionID=questionID, question=question, options=option, correctOption=correctOption, rows1=rows)
     return output
