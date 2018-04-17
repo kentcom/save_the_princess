@@ -1,3 +1,7 @@
+%count = 0
+%count1 = rows1
+%num = 11
+%temp = 0
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -146,24 +150,18 @@
       </div>
     </div>
     <div class="levels">
-      <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level10</button>
-      <br>
-      <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level9</button>
-      <br>
-      <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level8</button>
-      <br>
-      <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level7</button>
-      <br>
-      <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level6</button>
-      <br>
-      <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level5</button>
-      <br>
-      <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level4</button>
-      <br>
-      <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level3</button>
-      <br>
-      <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level2</button>
-      <br>
-      <button type="button" class="btn btn-outline-primary" style="background-color: #0000ff;color: #ffff; width:90px">Level1</button>
+      %while count<10:
+      %count = count+1
+      %num=num-1
+      %temp = 10 - count1
+      %if count< temp:
+      
+          <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level{{num}}</button>
+          <br>
+      %else:
+          <button type="button" class="btn btn-outline-primary" style="background-color: #0000ff;color: #ffff; width:90px">Level{{num}}</button>
+          <br>
+      
+      %end
     </div>
 </body>
