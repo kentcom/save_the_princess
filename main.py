@@ -27,6 +27,11 @@ def main():
 def redirectmain():
     return redirect('/')
 
+@get('/vision')
+def vision():
+    output = template('vision.tpl')
+    return output
+
 @get('/gamelore')
 def gamelore():
     output = template('gamelore.tpl')
@@ -55,7 +60,7 @@ def selectLevelQuestion(level):
 
     curr_time = int(round(time.time()))
     rand_value = curr_time % total + 1
-    print(rand_value)
+    print("rand-value = " + str(rand_value))
     #c.execute("update Questions SET Question = 'Which of the following landlocked countries is entirely contained within another country?' where QuestionID=3")
     #c.execute("CREATE TABLE GameHistory (UserID INTEGER, QuestionID INTEGER)")
     #conn.commit()
@@ -69,7 +74,7 @@ def selectLevelQuestion(level):
     for row in result:
         userid = row[0]
 
-    c.execute("select QuestionID from Questions where GameLevel=? and QuestionID NOT IN (select QuestionID from GameHistory where UserID = ?)", (level,userid))
+    c.execute("select QuestionID from Questions where GameLevel=? and QuestionID NOT IN (select QuestionID from GameHistory where UserID = ?)", (level,userid,))
     result = c.fetchall()
     c.close()
     index=1
@@ -77,6 +82,7 @@ def selectLevelQuestion(level):
     for row in result:
         if(index == rand_value):
             qid = int(row[0])
+            print("qid=" +str(qid))
         index = index + 1
     c.close()
     return qid
@@ -111,15 +117,35 @@ def gamepage(qid=1):
     game_user = session.get('game_user')
     if game_user is None:
         return redirect("/")
-    qid = selectLevelQuestion('MidLevel')
+    
     conn = sqlite3.connect('./Database/princess.db')
+    
+    #get userid from DB
     c = conn.cursor()
+    c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
+    result = c.fetchall()
+    c.close()
+    global userid, rows
+    for row in result:
+        userid = row[0]
 
+    print("UserID = " + str(userid))
+    rows = retrieveHistoryTable(userid)
+
+    qid = selectLevelQuestion('EntryLevel')
+    if(rows < 2):
+        qid = selectLevelQuestion('EntryLevel')
+    elif(rows < 6):
+        qid = selectLevelQuestion('MidLevel')
+    else:
+        qid = selectLevelQuestion('HighLevel')
+    
+    c = conn.cursor()
     c.execute("select Q.QuestionID,Q.Question,group_concat(O.Options_value) as Options_value, (select Options_value from Options WHERE OptionID = A.CorrectOptionID and QuestionID = Q.QuestionID) AS CorrectOption from Questions Q , Options O, Answers A where Q.QuestionID=O.QuestionID and Q.QuestionID=A.QuestionID and Q.QuestionID=? GROUP BY Q.Question",(qid,))
 
     result = c.fetchall()
     c.close()
-    global questionID, question, option, correctOption, rows
+    global questionID, question, option, correctOption
     for row in result:
         questionID = row[0]
         session['questionID'] = questionID
@@ -128,17 +154,6 @@ def gamepage(qid=1):
         option = row[2].split(',')
         correctOption = row[3]
 
-    #get userid from DB
-    c = conn.cursor()
-    c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
-    result = c.fetchall()
-    c.close()
-    global userid
-    for row in result:
-        userid = row[0]
-
-    print("UserID = " + str(userid))
-    rows = retrieveHistoryTable(userid)
     output = template('gamepage.tpl', questionID=questionID, question=question, options=option, correctOption=correctOption, rows1=rows)
     return output
 
@@ -184,6 +199,27 @@ def validateAnswer():
 
 @get('/gameover')
 def gameover():
+    session = bottle.request.environ.get('beaker.session')
+    game_user = session.get('game_user')
+    if game_user is None:
+        return redirect("/")
+    
+    conn = sqlite3.connect('./Database/princess.db')
+    
+    #get userid from DB
+    c = conn.cursor()
+    c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
+    result = c.fetchall()
+    c.close()
+    global userid, rows
+    for row in result:
+        userid = row[0]
+    c = conn.cursor()
+    c.execute("DELETE FROM GameHistory where UserID = ?",(userid,))
+    conn.commit()
+    c.close()
+    
+    
     output = template('gameover.tpl')
     return output
 

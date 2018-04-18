@@ -9,7 +9,7 @@
         <img src="Images\logo2.png">
       </div>
       <ul class ="main-nav">
-        <li><a href="">KENTCOM</a></li>
+        <li><a href="vision">KENTCOM</a></li>
         <li><a href="signin">SIGN IN</a></li>
         <li><a href="contactus">CONTACT US</a></li>
       </ul>
