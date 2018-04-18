@@ -148,29 +148,21 @@
         <br/>
         <label for="Lifelines" style="font-size:20px;">YOUR CURRENT LEVEL</label>
       </div>
-    </div> 
+    </div>
     <div class="levels">
       %while count<10:
-        <div>  
+        <div>
         %count = count+1
         %num=num-1
         %temp = 10 - count1
-        %if count< temp: 
-           <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level{{num}}</button><br/> 
-                    
+        %if count< temp:
+           <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level{{num}}</button><br/>
+
         %else:
             <div>
-            <button type="button" class="btn btn-outline-primary" style="background-color: #0000ff;color: #ffff; width:90px">Level{{num}}</button><br/> 
-            <div> 
-         </div>             
-      %for count in range(0,10):
-        %count = count+1
-        %num=num-1
-        %temp = 10 - count1
-        %if count< temp:      
-            <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level{{num}}</button><br/>         
-        %if count>temp:
-            <button type="button" class="btn btn-outline-primary" style="background-color: #0000ff;color: #ffff; width:90px">Level{{num}}</button><br/>               
+            <button type="button" class="btn btn-outline-primary" style="background-color: #0000ff;color: #ffff; width:90px">Level{{num}}</button><br/>
+            <div>
+         </div>
       %end
       </div>
 </body>
