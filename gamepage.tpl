@@ -151,13 +151,13 @@
     </div>
     <div class="levels">
       %while count<10:
-      %count = count+1
-      %num=num-1
-      %temp = 10 - count1
-      %if count< temp:      
-          <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level{{num}}</button><br/>         
-      %else:
-          <button type="button" class="btn btn-outline-primary" style="background-color: #0000ff;color: #ffff; width:90px">Level{{num}}</button><br/>               
+        %count = count+1
+        %num=num-1
+        %temp = 10 - count1
+        %if count< temp:      
+            <button type="button" class="btn btn-outline-primary" style="background-color: #004250;color: #ffff; width:90px">Level{{num}}</button><br/>         
+        %else:
+            <button type="button" class="btn btn-outline-primary" style="background-color: #0000ff;color: #ffff; width:90px">Level{{num}}</button><br/>               
       %end
     </div>
 </body>
