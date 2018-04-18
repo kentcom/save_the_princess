@@ -8,7 +8,7 @@
       <div class = "logo">
         <img src="Images/logo2.png">
       </div>
-      
+
     </div>
     <div class = "title">
       <h1> SAVE THE PRINCESS</h1>
@@ -16,8 +16,8 @@
         <h1> GAME OVER </h1>
       </div>
       <div class="buttonclass">
-        <a href="quit" class ="btn btn-quit"> QUIT </a>
-        <a href="startagian" class ="btn btn-startagain"> START AGAIN </a>
+        <a href="/" class ="btn btn-quit"> QUIT </a>
+        <a href="gamepage" class ="btn btn-startagain"> START AGAIN </a>
       </div>
     </div>
 </header>
