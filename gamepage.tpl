@@ -150,7 +150,7 @@
       </div>
     </div>
     <div class="levels">
-      %while count<10:
+      %for count in range(0,10):
         %count = count+1
         %num=num-1
         %temp = 10 - count1
