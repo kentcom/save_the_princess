@@ -40,6 +40,10 @@ def gamerule():
 
 #Select different level questions: 'EntryLevel', 'MidLevel', 'HighLevel'
 def selectLevelQuestion(level):
+    session = bottle.request.environ.get('beaker.session')
+    game_user = session.get('game_user')
+    if game_user is None:
+        return redirect("/")
     conn = sqlite3.connect('./Database/princess.db')
     c = conn.cursor()
     c.execute("select count(distinct(Question)) from Questions where GameLevel=?" , (level,))
@@ -52,9 +56,20 @@ def selectLevelQuestion(level):
     curr_time = int(round(time.time()))
     rand_value = curr_time % total + 1
     print(rand_value)
-    #c.execute("update Questions SET Question = 'Who is credited with inventing the first mass produced helicopter?' where QuestionID=4")
+    #c.execute("update Questions SET Question = 'Which of the following landlocked countries is entirely contained within another country?' where QuestionID=3")
+    #c.execute("CREATE TABLE GameHistory (UserID INTEGER, QuestionID INTEGER)")
     #conn.commit()
-    c.execute("select QuestionID from Questions where GameLevel=?", (level,))
+    #print("Table created")
+    #print("question updated")
+
+    #get userid from DB
+    c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
+    result = c.fetchall()
+    userid = -1
+    for row in result:
+        userid = row[0]
+
+    c.execute("select QuestionID from Questions where GameLevel=? and QuestionID NOT IN (select QuestionID from GameHistory where UserID = ?)", (level,userid))
     result = c.fetchall()
     c.close()
     index=1
@@ -63,7 +78,32 @@ def selectLevelQuestion(level):
         if(index == rand_value):
             qid = int(row[0])
         index = index + 1
+    c.close()
     return qid
+
+
+def addToHistoryTable(userID, questionID):
+    conn = sqlite3.connect('./Database/princess.db')
+    c = conn.cursor()
+    c.execute("INSERT INTO GameHistory values(?, ?)",(userID, questionID,))
+    conn.commit()
+    c.close()
+
+
+def retrieveHistoryTable(userID):
+    conn = sqlite3.connect('./Database/princess.db')
+    c = conn.cursor()
+    c.execute("SELECT count(QuestionID) from GameHistory where UserID=?",(userID,))
+    result = c.fetchall()
+    c.close()
+    global rowCount
+    rowCount = 0
+    if(result != None):
+        for row in result:
+            rowCount = int(row[0])
+    print("Total questions Answered = " + str(rowCount))
+    return rowCount
+
 
 @get('/gamepage')
 def gamepage(qid=1):
@@ -71,7 +111,7 @@ def gamepage(qid=1):
     game_user = session.get('game_user')
     if game_user is None:
         return redirect("/")
-    qid = selectLevelQuestion('EntryLevel')
+    qid = selectLevelQuestion('MidLevel')
     conn = sqlite3.connect('./Database/princess.db')
     c = conn.cursor()
 
@@ -79,7 +119,7 @@ def gamepage(qid=1):
 
     result = c.fetchall()
     c.close()
-    global questionID, question, option, correctOption
+    global questionID, question, option, correctOption, rows
     for row in result:
         questionID = row[0]
         session['questionID'] = questionID
@@ -88,8 +128,20 @@ def gamepage(qid=1):
         option = row[2].split(',')
         correctOption = row[3]
 
-    output = template('gamepage.tpl', questionID=questionID, question=question, options=option, correctOption=correctOption)
+    #get userid from DB
+    c = conn.cursor()
+    c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
+    result = c.fetchall()
+    c.close()
+    global userid
+    for row in result:
+        userid = row[0]
+
+    print("UserID = " + str(userid))
+    rows = retrieveHistoryTable(userid)
+    output = template('gamepage.tpl', questionID=questionID, question=question, options=option, correctOption=correctOption, rows1=rows)
     return output
+
 
 @post('/gamepage')
 def validateAnswer():
@@ -112,7 +164,18 @@ def validateAnswer():
         for row in result:
             CorrectOption = row[1]
         selectedOption = str(dict_data['selectedAnswer'])
+
+        #get userid from DB
+        c = conn.cursor()
+        c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
+        result = c.fetchall()
+        c.close()
+        global userid
+        for row in result:
+            userid = row[0]
+
         if CorrectOption == selectedOption:
+            addToHistoryTable(userid, questionID)
             return HTTPResponse(status=200)
         else:
             return HTTPResponse(status=500)

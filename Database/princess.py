@@ -9,7 +9,7 @@ conn.execute("DROP TABLE if exists Options")
 
 conn.execute("CREATE TABLE User (UserID INTEGER PRIMARY KEY AUTOINCREMENT, EmailAddress nvarchar(300) , CurrentGameLevel char(1000) )")
 
-conn.execute("CREATE TABLE GameHistory (UserID INTEGER PRIMARY KEY , QuestionID INTEGER)")
+conn.execute("CREATE TABLE GameHistory (UserID INTEGER , QuestionID INTEGER)")
 
 conn.execute("CREATE TABLE Questions (QuestionID INTEGER PRIMARY KEY,Question nvarchar(500)  , GameLevel char(1000) )")
 
@@ -26,7 +26,7 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (2,'Wh
 conn.execute ("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (3,'which of the following landlocked countries is entirely contained within another country?', 'EntryLevel')")
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (4,'who is credited with inventing the first mass produced helicopter?','MidLevel')")
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (5,'What letter must appear at the beginning of the registration number of all non-military aircraft in the U.S.?','MidLevel')")
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (6,'Who did artist Grant Wood use as the model for the farmer in his classic painting an American Gothic?','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (6,'Who did artist Grant Wood use as the model for the farmer in his classic painting an American Gothic?','MidLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (7,'The U.S. icon Uncle sam was based on samuel wilson,who worked during the war of 1812 as a what?','MidLevel')")
 
@@ -60,7 +60,7 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (20,'W
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (21,'Who did the USA buy the Virgin Islands from?' , 'MidLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (22,'What is the staple food of one third of the world’s population?','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (22,'What is the staple food of one third of the world''s population?','MidLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (23,'Who said COMPUTERS ARE USELESS THEY ONLY GIVE YOU ANSWERS?','HighLevel')")
 
@@ -70,17 +70,17 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (25,'C
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (26,'In the UK 60% of pets have what?','MidLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (27,'Which of these games might start with one kid saying, “taking care of business” and other saying “baking carrot biscuits”?' , 'MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (27,'Which of these games might start with one kid saying, ""taking care of business"" and other saying ""baking carrot biscuits""?' , 'MidLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (28,'I PITY THE FOOL is a catchphrase of which famous American?','MidLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (29,'Denny’s restaurants offer a signature breakfast dish names after what sports team?','HighLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (29,'Denny''s restaurants offer a signature breakfast dish names after what sports team?','HighLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (30,'How many U.S states have names that begin with the word “New”? ',  'HighLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (30,'How many U.S states have names that begin with the word ""New""? ',  'HighLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (31,'Slightly inebriated is a common definition for which of these words?','MidLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (32,'What is the most chosen name for US school’s sports teams?','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (32,'What is the most chosen name for US school''s sports teams?','MidLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (33,'Which profession drinks the most coffee?' , 'MidLevel')")
 
