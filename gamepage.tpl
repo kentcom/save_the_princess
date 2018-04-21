@@ -8,6 +8,16 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" type="text/css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Alerts JS -->
+  <script src="https://unpkg.com/sweetalert2@7.19.0/dist/sweetalert2.all.js"></script>
+
+  <!-- disable keys -->
+  <script type='text/javascript'>
+    $(document).keydown(function(e){
+      e.preventDefault();
+    });
+  </script>
   <title>KENTCOM-Game Page</title>
   <link rel="stylesheet" type="text/css" href="CSS/gamepage.css">
   <style type="text/css">
@@ -67,10 +77,34 @@
                 data: JSON.stringify(jsondata),
                 type: 'POST',
                 success: function (response) {
-                  window.location.replace("https://kentcom.pythonanywhere.com/gamepage");
+                  swal({
+                      title: 'Correct!!',
+                      allowOutsideClick: false,
+                      allowEscapeKey: false,
+                      type: 'success',
+                      showCancelButton: false,
+                      confirmButtonColor: '#3085d6',
+                      confirmButtonText: 'Continue'
+                    }).then((result) => {
+                      if (result.value) {
+                        window.location.replace("https://kentcom.pythonanywhere.com/gamepage");
+                      }
+                    })
                 },
                 error: function (error) {
-                  window.location.replace("https://kentcom.pythonanywhere.com/gameover");
+                  swal({
+                      title: 'Oops...!!',
+                      allowOutsideClick: false,
+                      allowEscapeKey: false,
+                      type: 'error',
+                      showCancelButton: false,
+                      confirmButtonColor: '#3085d6',
+                      confirmButtonText: 'Continue'
+                    }).then((result) => {
+                      if (result.value) {
+                        window.location.replace("https://kentcom.pythonanywhere.com/gameover");
+                      }
+                    })
                 }
             });
         }

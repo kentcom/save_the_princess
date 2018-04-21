@@ -299,7 +299,7 @@ conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A'
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',34,'Yogi Bear and Boo Boo')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',34,'Itchy and Scratchy')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',34,'Road Runner and Wiley Coyote')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',35,'Linux computer operating system')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',35,'Linux operating system')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',35,'Mac operating system')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',35,'Kernel')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',35,'Ubuntu')")

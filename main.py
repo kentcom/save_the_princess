@@ -44,47 +44,20 @@ def gamerule():
 
 
 #Select different level questions: 'EntryLevel', 'MidLevel', 'HighLevel'
-def selectLevelQuestion(level):
+def selectLevelQuestion(level, userid):
     session = bottle.request.environ.get('beaker.session')
     game_user = session.get('game_user')
     if game_user is None:
         return redirect("/")
     conn = sqlite3.connect('./Database/princess.db')
     c = conn.cursor()
-    c.execute("select count(distinct(Question)) from Questions where GameLevel=?" , (level,))
+
+    c.execute("select QuestionID from Questions where GameLevel=? and QuestionID NOT IN (select QuestionID from GameHistory where UserID = ?) ORDER BY random() LIMIT 1", (level,userid,))
     result = c.fetchall()
-    global total
     for row in result:
-        total = int(row[0])
-        print(total)
-
-    curr_time = int(round(time.time()))
-    rand_value = curr_time % total + 1
-    print("rand-value = " + str(rand_value))
-    #c.execute("update Questions SET Question = 'Which of the following landlocked countries is entirely contained within another country?' where QuestionID=3")
-    #c.execute("CREATE TABLE GameHistory (UserID INTEGER, QuestionID INTEGER)")
-    #conn.commit()
-    #print("Table created")
-    #print("question updated")
-
-    #get userid from DB
-    c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
-    result = c.fetchall()
-    userid = -1
-    for row in result:
-        userid = row[0]
-
-    c.execute("select QuestionID from Questions where GameLevel=? and QuestionID NOT IN (select QuestionID from GameHistory where UserID = ?)", (level,userid,))
-    result = c.fetchall()
+        qid = int(row[0])
     c.close()
-    index=1
-    global qid
-    for row in result:
-        if(index == rand_value):
-            qid = int(row[0])
-            print("qid=" +str(qid))
-        index = index + 1
-    c.close()
+    print("QuestionID = " + str(qid))
     return qid
 
 
@@ -132,13 +105,13 @@ def gamepage(qid=1):
     print("UserID = " + str(userid))
     rows = retrieveHistoryTable(userid)
 
-    qid = selectLevelQuestion('EntryLevel')
+    qid = selectLevelQuestion('EntryLevel', userid)
     if(rows < 2):
-        qid = selectLevelQuestion('EntryLevel')
+        qid = selectLevelQuestion('EntryLevel', userid)
     elif(rows < 6):
-        qid = selectLevelQuestion('MidLevel')
+        qid = selectLevelQuestion('MidLevel', userid)
     else:
-        qid = selectLevelQuestion('HighLevel')
+        qid = selectLevelQuestion('HighLevel', userid)
     
     c = conn.cursor()
     c.execute("select Q.QuestionID,Q.Question,group_concat(O.Options_value) as Options_value, (select Options_value from Options WHERE OptionID = A.CorrectOptionID and QuestionID = Q.QuestionID) AS CorrectOption from Questions Q , Options O, Answers A where Q.QuestionID=O.QuestionID and Q.QuestionID=A.QuestionID and Q.QuestionID=? GROUP BY Q.Question",(qid,))
