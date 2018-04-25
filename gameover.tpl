@@ -1,24 +1,17 @@
 <head>
-  <title>KENTCOM-Home Page</title>
-  <link href ="CSS/gameover.css" rel="stylesheet" type="text/css">
+  <title>KENTCOM-Game Over</title>
+  <link href ="gameover.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <header>
-    <div class = "row">
       <div class = "logo">
-        <img src="Images/logo2.png">
+        <img src="Images\logo2.png">
       </div>
 
-    </div>
-    <div class = "title">
-      <h1> SAVE THE PRINCESS</h1>
-	  <div class="buttonclass">
-        <h1> GAME OVER </h1>
-      </div>
-      <div class="buttonclass">
-        <a href="/" class ="btn btn-quit"> QUIT </a>
-        <a href="gamepage" class ="btn btn-startagain"> START AGAIN </a>
-      </div>
+      <div class="buttonclass"><br><br><br><br>
+        <a href="gamepage" class ="btn btn-quit">Play Again and Save The Princess </a>
+        <a href="main" class ="btn btn-startagain"> I am a Quitter </a>
+
     </div>
 </header>
 
