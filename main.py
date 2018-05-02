@@ -174,6 +174,16 @@ def validateAnswer():
     except ValueError:
         return HTTPResponse(status=500)
 
+@post('/flipbutton')
+def flipbutton():
+    try:
+        session = bottle.request.environ.get('beaker.session')
+        questionID = session.get('questionID')
+        print("Flip button called",questionID)
+        addToHistoryTable(userid, questionID)
+    except ValueError:
+        return HTTPResponse(status=500)
+
 @get('/gameover')
 def gameover():
     session = bottle.request.environ.get('beaker.session')

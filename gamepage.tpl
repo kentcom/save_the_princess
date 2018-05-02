@@ -67,7 +67,55 @@
   </style>
 
   <script>
+        function flip()
+        {
+            var btn = document.getElementById("flip");
+            document.cookie = "flip_btn=false";     
+            var x = getCookie("flip_btn");
+            var jsondata = { "": "" }
+            $.ajax({
+                url: '/flipbutton',
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(jsondata),
+                type: 'POST',
+                success: function (response) {
+                  window.location.replace("https://kentcom.pythonanywhere.com/gamepage");
+                  btn.disabled = true;
+                }
+                      });
+                      
+        }
+        function checkflip()
+        {
+          var btn = document.getElementById("flip");
+              if(getCookie("flip_btn"))
+            {
+              btn.disabled = true;
+              setCookie("true");
+              
+            }
 
+
+        }
+        function setCookie(cname) {
+          
+          document.cookie = cname;
+}
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+              var c = ca[i];
+              while (c.charAt(0) == ' ') {
+                  c = c.substring(1);
+              }
+              if (c.indexOf(name) == 0) {
+                  return c.substring(name.length, c.length);
+              }
+          }
+          return "";
+}
+        
         function homebutton()
         {
           
@@ -216,7 +264,7 @@
                 },
                 error: function (error) {
                   swal({
-                      title: 'Oops...!!',
+                      title: 'Ohoh.!!',
                       allowOutsideClick: false,
                       allowEscapeKey: false,
                       type: 'error',
@@ -234,7 +282,7 @@
     </script>
 </head>
 
-<body>
+<body onload="checkflip()">
   <header>
     <div class="row">
       <div class="logo">
@@ -289,7 +337,7 @@
       <br/>
       <br/>
       <button type="button" class="btn btn-outline-primary" style="background-color: #9A5280;color: #ffff; width:120px;height:50px">Even-Steven</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <button type="button" class="btn btn-outline-primary" style="background-color: #9A5280;color: #ffff; width:120px;height:50px">Flip</button>
+      <button type="button" id="flip" onclick="flip()" class="btn btn-outline-primary" style="background-color: #9A5280;color: #ffff; width:120px;height:50px">Flip</button>
       <br/>
       <br/>
       <button type="button" class="btn btn-outline-primary" style="background-color: #9A5280;color: #ffff; width:120px;height:50px">Double Dip</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
