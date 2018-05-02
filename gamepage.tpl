@@ -67,6 +67,26 @@
   </style>
 
   <script>
+
+        function homebutton()
+        {
+          
+          swal({
+          title: "Are you sure?",
+          text: "You will not be able to recover the process in the game!",
+          type: "warning",
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          confirmButtonText: 'Continue',
+          animation: "slide-from-top",
+          dangerMode: true,
+        }).then((result) => {
+          if (result.value) {
+            window.location.replace("https://kentcom.pythonanywhere.com/gameover");
+          }
+        });
+
+        }
         function validateAnswer(elem) {
 			      var selectedID = elem.id;
             var selectedAnswer = document.getElementById(selectedID).value;
@@ -87,7 +107,110 @@
                       confirmButtonText: 'Continue'
                     }).then((result) => {
                       if (result.value) {
+                        if({{rows1}}==1)
+                        {
+                          
+                          swal({
+                                  title: "Hooraayy!!!!",
+                                  text: "You have completed 2 levels",
+                                  allowOutsideClick: false,
+                                  allowEscapeKey: false,
+                                  showCancelButton: false,
+                                  confirmButtonColor: '#3085d6',
+                                  confirmButtonText: 'Continue',
+                                  animation: "slide-from-top",
+                                  dangerMode: true,
+                                }).then((result) => {
+                                  if (result.value) {
+                                    window.location.replace("https://kentcom.pythonanywhere.com/gamepage");
+                                  }
+                                });
+                        }
+                          else if({{rows1}}==3)
+                        {
+                          
+                          swal({
+                                  title: "Hooraayy!!!!",
+                                  text: "It is going to be exciting now onwards!! You have completed 4 Levels",
+                                  allowOutsideClick: false,
+                                  allowEscapeKey: false,
+                                  showCancelButton: false,
+                                  confirmButtonColor: '#3085d6',
+                                  confirmButtonText: 'Continue',
+                                  animation: "slide-from-top",
+                                  dangerMode: true,
+                                }).then((result) => {
+                                  if (result.value) {
+                                    window.location.replace("https://kentcom.pythonanywhere.com/gamepage");
+                                  }
+                                });
+                        }
+                        else if({{rows1}}==5)
+                        {
+                          
+                          swal({
+                                  title: "WARRIOR to DEMON:",
+                                  text: "I will save my Princess, I shall die trying to save her!!",
+                                  allowOutsideClick: false,
+                                  allowEscapeKey: false,
+                                  showCancelButton: false,
+                                  confirmButtonColor: '#3085d6',
+                                  confirmButtonText: 'Continue',
+                                  animation: "slide-from-top",
+                                  dangerMode: true,
+                                }).then((result) => {
+                                  if (result.value) {
+                                    window.location.replace("https://kentcom.pythonanywhere.com/gamepage");
+                                  }
+                                });
+                        }
+                        
+                        else if({{rows1}}==7)
+                        {
+                          
+                          swal({
+                                  title: "WARRRIOR to DEMON:",
+                                  text: "You cannot defeat my kingdom, I will make my King Proud!!",
+                                  allowOutsideClick: false,
+                                  allowEscapeKey: false,
+                                  showCancelButton: false,
+                                  confirmButtonColor: '#3085d6',
+                                  confirmButtonText: 'Continue',
+                                  animation: "slide-from-top",
+                                  dangerMode: true,
+                                }).then((result) => {
+                                  if (result.value) {
+                                    window.location.replace("https://kentcom.pythonanywhere.com/gamepage");
+                                  }
+                                });
+                        }
+                        else if({{rows1}}==8)
+                        {
+                          
+                          swal({
+                                  title: "DEMON......!!!!",
+                                  text: "You have crushed my confidence, this question is everything I have..!!",
+                                  allowOutsideClick: false,
+                                  allowEscapeKey: false,
+                                  showCancelButton: false,
+                                  confirmButtonColor: '#3085d6',
+                                  confirmButtonText: 'Continue',
+                                  animation: "slide-from-top",
+                                  dangerMode: true,
+                                }).then((result) => {
+                                  if (result.value) {
+                                    window.location.replace("https://kentcom.pythonanywhere.com/gamepage");
+                                  }
+                                });
+                        }
+                        else if({{rows1}}>9)
+                        {
+                          window.location.replace("https://kentcom.pythonanywhere.com/");
+                        }
+                        else
+                        {
                         window.location.replace("https://kentcom.pythonanywhere.com/gamepage");
+                        }
                       }
                     })
                 },
@@ -119,7 +242,7 @@
       </div>
       <ul class="main-nav">
         <li>
-          <a href="main">HOME</a>
+          <a href="javascript:homebutton()" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">HOME</a>
         </li>
       </ul>
     </div>
