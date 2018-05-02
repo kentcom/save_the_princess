@@ -35,7 +35,7 @@ def select_task_by_priority(conn, priority):
         print(row)
 		
 def main():
-    database = "C:/Users/Chetana/python/princess.db"
+    database = "C:/Users/Chetana/python/SEMDBScripts/princess.db"
  
     # create a database connection
     conn = create_connection(database)

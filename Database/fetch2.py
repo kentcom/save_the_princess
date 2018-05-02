@@ -27,7 +27,7 @@ def select_task_by_priority(conn, priority):
     :return:
     """
     cur = conn.cursor()
-    cur.execute("select Q.Question,group_concat(O.Options_value) as Options_value from Questions Q , Options O where Q.QuestionID=O.QuestionID GROUP BY Q.Question ")
+    cur.execute("select Q.Question,O.Options_value as Options_value from Questions Q , Options O where Q.QuestionID=O.QuestionID GROUP BY Q.Question ")
 
 
 
@@ -39,7 +39,8 @@ def select_task_by_priority(conn, priority):
         print(row)
 		
 def main():
-    database = "C:/Users/Chetana/python/princess.db"
+    database =  "C:/Users/Chetana/python/SEMDBScripts/princess.db"
+
  
     # create a database connection
     conn = create_connection(database)
