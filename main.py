@@ -42,6 +42,10 @@ def gamerule():
     output = template('gamerule.tpl')
     return output
 
+@get('/congrats')
+def congrats():
+    output = template('congrats.tpl')
+    return output
 
 #Select different level questions: 'EntryLevel', 'MidLevel', 'HighLevel'
 def selectLevelQuestion(level, userid):

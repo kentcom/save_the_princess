@@ -130,7 +130,7 @@
                         {
                           
                           swal({
-                                  title: "Hooraayy!!!!",
+                                  title: "Bravo!!!!",
                                   text: "It is going to be exciting now onwards!! You have completed 4 Levels",
                                   allowOutsideClick: false,
                                   allowEscapeKey: false,
@@ -149,8 +149,8 @@
                         {
                           
                           swal({
-                                  title: "WARRIOR to DEMON:",
-                                  text: "I will save my Princess, I shall die trying to save her!!",
+                                  title: "WARRIOR TO DEMON:",
+                                  text: "I will save my Princess, I shall die trying to save my kingdom's pride!!",
                                   allowOutsideClick: false,
                                   allowEscapeKey: false,
                                   showCancelButton: false,
@@ -169,7 +169,7 @@
                         {
                           
                           swal({
-                                  title: "WARRRIOR to DEMON:",
+                                  title: "WARRRIOR TO DEMON:",
                                   text: "You cannot defeat my kingdom, I will make my King Proud!!",
                                   allowOutsideClick: false,
                                   allowEscapeKey: false,
@@ -189,7 +189,7 @@
                           
                           swal({
                                   title: "DEMON......!!!!",
-                                  text: "You have crushed my confidence, this question is everything I have..!!",
+                                  text: "You are smart indeed, this next question is everything I have..!!",
                                   allowOutsideClick: false,
                                   allowEscapeKey: false,
                                   showCancelButton: false,
@@ -205,7 +205,7 @@
                         }
                         else if({{rows1}}>9)
                         {
-                          window.location.replace("https://kentcom.pythonanywhere.com/");
+                          window.location.replace("https://kentcom.pythonanywhere.com/congrats");
                         }
                         else
                         {
