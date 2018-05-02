@@ -16,7 +16,7 @@ body{
   transform: translate(-50%,-50%);
 }
 html {
-  background: linear-gradient(rgba(0,0,0,0.4),rgba(1,0,0,0.4)),url('(../Images/go.gif') no-repeat center center fixed;
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../Images/go.gif') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -43,6 +43,7 @@ html {
 {
   margin-top:290px;
   font-size: 28px;
+  text-align: center;
   }
 h1{
   color: white;

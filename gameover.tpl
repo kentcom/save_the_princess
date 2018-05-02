@@ -1,11 +1,11 @@
 <head>
   <title>KENTCOM-Game Over</title>
-  <link href ="gameover.css" rel="stylesheet" type="text/css">
+  <link href ="CSS/gameover.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <header>
       <div class = "logo">
-        <img src="Images\logo2.png">
+        <img src="Images/logo2.png">
       </div>
 
       <div class="buttonclass"><br><br><br><br>
