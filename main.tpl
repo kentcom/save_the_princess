@@ -22,5 +22,14 @@
       </div>
     </div>
 </header>
-
+<script type="text/javascript">
+  ( function() {
+    if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [1] }; };
+    var unit = {"calltype":"async[2]","publisher":"kentcom2018","width":728,"height":90,"sid":"Chitika Default"};
+    var placement_id = window.CHITIKA.units.length;
+    window.CHITIKA.units.push(unit);
+    document.write('<div id="chitikaAdBlock-' + placement_id + '" style="position: fixed;bottom: 0;width: 100%;"></div>');
+}());
+</script>
+<script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
 </body>
