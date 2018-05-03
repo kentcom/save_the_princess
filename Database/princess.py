@@ -38,12 +38,12 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (10,'I
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (11,'Which of these dance names is used to describe a fashionable dot?','HighLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (12,'What is the only position on a football team that can be sacked? ',  'HighLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (12,'What is the only position on a football team that can be sacked? ',  'EntryLevel')")
 
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (13,'What country launched its first space rocket January 1961?','MidLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (14,'Which American state is nicknamed The Diamond State?','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (14,'Which American state is nicknamed The Diamond State?','EntryLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (15,'In these series, you will be looking at both the letter pattern and the number pattern.Fill the blank in the middle of the series or end of the series?' , 'MidLevel')")
 
@@ -51,7 +51,7 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (16,'W
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (17,'What was the first credit card?','HighLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (18,'Who Wrote the Harry Potter Series?? ',  'HighLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (18,'Who Wrote the Harry Potter Series?? ',  'EntryLevel')")
 
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (19,'On What Continent is Zambia Located?','MidLevel')")
@@ -66,17 +66,17 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (23,'W
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (24,'25% of Americans believe which fictional character is real? ',  'HighLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (25,'Chrometrophobia is the fear of what?','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (25,'Chrometrophobia is the fear of what?','EntryLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (26,'In the UK 60% of pets have what?','MidLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (27,'Which of these games might start with one kid saying, “taking care of business” and other saying “baking carrot biscuits”?' , 'MidLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (28,'I PITY THE FOOL is a catchphrase of which famous American?','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (28,'I PITY THE FOOL is a catchphrase of which famous American?','EntryLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (29,'Denny’s restaurants offer a signature breakfast dish names after what sports team?','HighLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (30,'How many U.S states have names that begin with the word “New”? ',  'HighLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (30,'How many U.S states have names that begin with the word “New”? ',  'EntryLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (31,'Slightly inebriated is a common definition for which of these words?','MidLevel')")
 
@@ -88,11 +88,11 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (34,'W
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (35,'Linus Torvalds invented and wrote what?','HighLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (36,'What is measured on the Torro scale?',  'HighLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (36,'What is measured on the Torro scale?',  'EntryLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (37,'What colour is the wax covering Gouda cheese?','MidLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (38,'Triton is the largest satellite of which planet?','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (38,'Triton is the largest satellite of which planet?','EntryLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (39,'Which of these operating systems was written by Linus Torvalds?' , 'MidLevel')")
 
@@ -102,13 +102,13 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (41,'W
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (42,'Look at this series: 53, 53, 40, 40, 27, 27, ... What number should come next?','MidLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (43,'Look at this series: 5.2, 4.8, 4.4, 4, ... What number should come next?','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (43,'Look at this series: 5.2, 4.8, 4.4, 4, ... What number should come next?','EntryLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (44,'Some months have 31 days, other have 30 days, but how many have 28 days?','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (44,'Some months have 31 days, other have 30 days, but how many have 28 days?','EntryLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (45,'What goes up and down but always remains in the same place?','MidLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (46,'If you divide 30 by half and add ten, what do you get?','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (46,'If you divide 30 by half and add ten, what do you get?','EntryLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (47,'If a monkey, a squirrel, and a bird are racing to the top of a coconut tree, who will get the banana first?','MidLevel')")
 
@@ -118,7 +118,7 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (49,'C
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (50,'Which letter in English alphabet we drink?','MidLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (51,'How many trailing zeros are in the number 5! (5 factorial)?','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (51,'How many trailing zeros are in the number 5! (5 factorial)?','EntryLevel')")
 
 
 conn.execute("Insert into GameHistory(QuestionID) values (1)")
@@ -179,16 +179,16 @@ conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C'
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',1,'Beetle')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',2,'Lyndon Johnson')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',2,'Richard Nixon')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',2,'Jimmy carter')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',2,'Jimmy Carter')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',2,'Gerald Ford')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',3,'Lesotho')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',3,'Burkina Faso')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',3,'Mongolia')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',3,'Luxembourg')")
 
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',4,'Igor sikorsky')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',4,'Elmer sperry')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',4,'ferdinard von zeppelin')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',4,'Igor Sikorsky')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',4,'Elmer Sperry')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',4,'Ferdinard Von Zeppelin')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',4,'Gottlieb Daimler')")
 
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',5,'N')")
@@ -196,25 +196,25 @@ conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B'
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',5,'U')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',5,'L')")
 
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',6,'Traveling  Salesman')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',6,'Traveling Salesman')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',6,'Local  Sheriff')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',6,'His dentist')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',6,'His butcher')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',6,'His Dentist')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',6,'His Butcher')")
 
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',7,'Meat Inspector')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',7,'Mail deliver')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',7,'Mail Deliver')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',7,'Historian')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',7,'Weapons Mechanic')")
 
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',8,'Albert Einstein')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',8,'Niels bohr')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',8,'Niels Bohr')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',8,'Issac Newton')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',8,'Enrico Fermi')")
 
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',9,'Over the eyes')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',9,'On the knees')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',9,'Around the throat')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',9,'On the hips?')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',9,'Over The Eyes')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',9,'On The Knees')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',9,'Around The Throat')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',9,'On The Hips?')")
 
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',10,'ping!ping!')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',10,'beep!beep!')")
@@ -226,9 +226,9 @@ conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B'
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',11,'Lambada')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',11,'Polka')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',12,'Center')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',12,'Wide receiver')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',12,'Wide Receiver')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',12,'Tight End')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',12,'Quarter back')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',12,'Quarter Back')")
 
 
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',13,'Europe')")
@@ -294,7 +294,7 @@ conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D'
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',26,'Health Insurance')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',26,'Clothes')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',26,'Passport')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',26,'Vaccine against Rabies')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',26,'Vaccine Against Rabies')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',27,'Hopscotch')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',27,'Rock, Paper, Scissors')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',27,'Telephone')")
@@ -307,7 +307,7 @@ conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D'
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',29,'Slam Dunk')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',29,'Touchdown')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',29,'Knockout')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',29,'Grand slam')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',29,'Grand Slam')")
 
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',30,'2')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',30,'3')")
@@ -316,13 +316,13 @@ conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D'
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',31,'Milky')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',31,'Watery')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',31,'Berry')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',31,'Jello-shotty')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',31,'Jello-Shotty')")
 
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',32,'Eagles or Tigers')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',32,'Stars')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',32,'Pythons')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',32,'Bulls')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',33,'Health care')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',33,'Health Care')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',33,'Information Technology')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',33,'Human Resource')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',33,'Sports')")
@@ -331,8 +331,8 @@ conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A'
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',34,'Yogi Bear and Boo Boo')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',34,'Itchy and Scratchy')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',34,'Road Runner and Wiley Coyote')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',35,'Linux computer operating system')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',35,'Mac operating system')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',35,'Linux Computer Operating System')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',35,'Mac Operating System')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',35,'Kernel')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',35,'Ubuntu')")
 
@@ -354,9 +354,9 @@ conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B'
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',39,'Linux')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',39,'MVS')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',40,'Provide Evidence')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',40,'Find bugs')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',40,'Find Bugs')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',40,'Find Issues')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',40,'All the above options')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',40,'All The Above Options')")
 
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',41,'10')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',41,'20')")
