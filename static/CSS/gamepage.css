@@ -41,3 +41,16 @@ textarea {
     font-weight: bold;
     color: solid black;
 }
+.bannerMobile {
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+  /* For Mobiles: */
+  .bannerDesktop {
+      display: none;
+  }
+
+  .bannerMobile {
+      display: block;
+  }
+}

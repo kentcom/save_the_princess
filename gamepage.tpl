@@ -361,7 +361,8 @@
       </div>
       <div class="row">
         <div class="col-md-1">
-          <label for="Adv" style="font-size:25px;">Adv </label>
+          <img src="Images\bmw-h.png" class="img-fluid bannerDesktop" alt="Responsive" style="width:100%; height:100%">
+          <img src="Images\bmw-v.png" class="img-fluid bannerMobile" alt="Responsive" style="width:100%; height:100%">
         </div>
         <div class="col-md-7">
           <div class="row">
@@ -448,7 +449,8 @@
             %end
         </div>
         <div class="col-md-1">
-          <label for="Adv" style="font-size:25px;">Adv </label>
+          <img src="Images\bmw-h.png" class="img-fluid bannerDesktop" alt="Responsive" style="width:100%; height:100%">
+          <img src="Images\bmw-v.png" class="img-fluid bannerMobile" alt="Responsive" style="width:100%; height:100%">
         </div>
       </div>
     </div>
