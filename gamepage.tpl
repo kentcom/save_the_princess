@@ -172,7 +172,7 @@
       OId2.disabled = true;
       OId3.disabled = true;
       OId4.disabled = true;
-      
+
       var i = 0;
 
       var AOId1 = document.getElementById("option_A").value;
@@ -184,7 +184,6 @@
                   OId1.disabled = false;
                   var temp = [OId2,OId3,OId4];
                   var item = temp[Math.floor(Math.random()*temp.length)]
-                  alert(item.value);
                   item.disabled = false;
 
                   document.getElementById("option_A").onclick = function () {
@@ -199,7 +198,6 @@
                   OId2.disabled = false;
                   var temp = [OId1,OId3,OId4];
                   var item = temp[Math.floor(Math.random()*temp.length)]
-                  alert(item.value);
                   item.disabled = false;
 
                   document.getElementById("option_B").onclick = function () {
@@ -215,7 +213,6 @@
                   OId3.disabled = false;
                   var temp = [OId1,OId2,OId4];
                   var item = temp[Math.floor(Math.random()*temp.length)]
-                  alert(item.value);
                   item.disabled = false;
 
                   document.getElementById("option_C").onclick = function () {
@@ -226,12 +223,11 @@
                   validateAnswer(item);
               }
        }
-       
+
        if ("{{correctOption}}" == AOId4) {
                   OId4.disabled = false;
                   var temp = [OId1,OId2,OId3];
                   var item = temp[Math.floor(Math.random()*temp.length)]
-                  alert(item.value);
                   item.disabled = false;
 
                   document.getElementById("option_D").onclick = function () {
