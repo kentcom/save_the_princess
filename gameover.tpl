@@ -1,8 +1,14 @@
 <head>
   <title>KENTCOM-Game Over</title>
   <link href ="CSS/gameover.css" rel="stylesheet" type="text/css">
+  <script>
+    function deleteCookie() {
+      document.cookie = "DoubleDip=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      document.cookie = "flip_btn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    }
+  </script>
 </head>
-<body>
+<body onload="deleteCookie();">
       <div class = "logo">
         <img src="Images\logo2.png">
       </div>

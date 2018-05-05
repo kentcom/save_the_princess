@@ -1,0 +1,175 @@
+*
+{
+  margin:0;
+  padding:0;
+}
+
+.row
+{
+  max-width:1140px;
+  margin:0 auto;
+}
+body{
+  font-family: tahoma;
+}
+
+header
+{
+  background-image:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url("../Images/main.png");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+ .title h2
+ {
+
+  text-align: center;
+  color: #f8d983;
+  position: absolute;
+  top : 10%;
+  left :30%;
+  text-decoration: underline;
+
+}
+
+.main-nav
+{
+  list-style: none;
+  float: right;
+  margin-top: 15px;
+}
+.main-nav li
+{
+  display: inline-block;
+  margin-left: 800px;
+
+}
+.main-nav li a
+{
+  color: #e67e22;
+  text-decoration: none;
+  font-size: 120%;
+  font-weight: bold;
+  margin-top: 20%;
+}
+
+.logo img{
+  height :90px;
+  float: left;
+  margin-top:10px;
+  transform: translate(-70%,10%);
+}
+
+.main-nav li a:hover
+{
+  color: #e67e22;
+  border-bottom: 2px solid  #e67e22;
+  transition: all 0.5s ease-in;
+  padding: 15px 0;
+}
+
+.label
+{
+  color: #e67e22;
+  position: absolute;
+top : 20%;
+left :10%;
+}
+.button1
+{
+  position: absolute;
+  top: 63%;
+  left:12%;
+}
+.button2
+{
+  position: absolute;
+  top: 63%;
+  left:45%;
+}
+.button3
+{
+  position: absolute;
+  top: 80%;
+  left:12%;
+}
+.button4
+{
+  position: absolute;
+  top: 80%;
+  left:45%;
+}
+.hint
+{
+  color: #e67e22;
+  position: absolute;
+  top:80%;
+  left:10%;
+}
+.lifelines
+{
+  top:10%;
+  position: absolute;
+  left: 80%;
+}
+.levels{
+  position: absolute;
+  top :45%;
+  left:85%;
+}
+
+.blur {
+  background-image:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url("../Images/main.png");
+  background-size: cover;
+  overflow: hidden;
+  filter: blur(13px);
+  position: absolute;
+  height: 300px;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+}
+
+.widget {
+  border-top: 2px solid rgba(255, 255, 255, .5);
+  border-bottom: 2px solid rgba(255, 255, 255, .5);
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0.9;
+  z-index: 10px;
+}
+
+.center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.text {
+  height: 200px;
+  width: 622px;
+}
+
+.text h3 {
+  text-align: center;
+  text-shadow: 1px 1px rgba(0, 0, 0, .1);
+  color: #ffffff;
+  margin-top: 57px;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+}
+
+.text p {
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 1px 1px rgba(0, 0, 0, .1);
+  margin-top: 0px;
+  font-family: 'Lato', serif;
+  font-weight: 400;
+  font-size: 22px;
+}

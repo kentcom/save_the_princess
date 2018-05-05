@@ -48,7 +48,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" type="text/css" />
     <title>KENTCOM-Game Page</title>
-    <link rel="stylesheet" type="text/css" href="CSS/gamepage.css">
+    <link rel="stylesheet" type="text/css" href="CSS/gamepage_old.css">
 </head>
 
 <body>
