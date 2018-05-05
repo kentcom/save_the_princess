@@ -32,6 +32,13 @@ function checkDouble() {
     }
 }
 
+function checkEvenSteven() {
+    var btn = document.getElementById("EvenSteven");
+    if (getCookie("EvenSteven")) {
+        btn.disabled = true;
+    }
+}
+
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');

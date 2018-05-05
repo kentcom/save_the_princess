@@ -127,7 +127,7 @@
                           }
                       });
                   }
-                  else if({{rows1}}>9)
+                  else if({{rows1}}>=9)
                   {
                       window.location.replace("https://kentcom.pythonanywhere.com/congrats");
                   }
@@ -156,6 +156,94 @@
       });
     }
 
+    function EvenSteven()
+    {
+      var btn = document.getElementById("EvenSteven");
+      document.cookie = "EvenSteven=false";
+      var x = getCookie("EvenSteven");
+      btn.disabled = true;
+
+      var OId1 = document.getElementById("option_A");
+      var OId2 = document.getElementById("option_B");
+      var OId3 = document.getElementById("option_C");
+      var OId4 = document.getElementById("option_D");
+
+      OId1.disabled = true;
+      OId2.disabled = true;
+      OId3.disabled = true;
+      OId4.disabled = true;
+      
+      var i = 0;
+
+      var AOId1 = document.getElementById("option_A").value;
+      var AOId2 = document.getElementById("option_B").value;
+      var AOId3 = document.getElementById("option_C").value;
+      var AOId4 = document.getElementById("option_D").value;
+
+      if ("{{correctOption}}" == AOId1) {
+                  OId1.disabled = false;
+                  var temp = [OId2,OId3,OId4];
+                  var item = temp[Math.floor(Math.random()*temp.length)]
+                  alert(item.value);
+                  item.disabled = false;
+
+                  document.getElementById("option_A").onclick = function () {
+                  validateAnswer(OId1);
+                  }
+
+                  item.onclick = function () {
+                  validateAnswer(item);
+              }
+              }
+       if ("{{correctOption}}" == AOId2) {
+                  OId2.disabled = false;
+                  var temp = [OId1,OId3,OId4];
+                  var item = temp[Math.floor(Math.random()*temp.length)]
+                  alert(item.value);
+                  item.disabled = false;
+
+                  document.getElementById("option_B").onclick = function () {
+                  validateAnswer(OId2);
+                  }
+
+                  item.onclick = function () {
+                  validateAnswer(item);
+              }
+       }
+
+       if ("{{correctOption}}" == AOId3) {
+                  OId3.disabled = false;
+                  var temp = [OId1,OId2,OId4];
+                  var item = temp[Math.floor(Math.random()*temp.length)]
+                  alert(item.value);
+                  item.disabled = false;
+
+                  document.getElementById("option_C").onclick = function () {
+                  validateAnswer(OId3);
+                  }
+
+                  item.onclick = function () {
+                  validateAnswer(item);
+              }
+       }
+       
+       if ("{{correctOption}}" == AOId4) {
+                  OId4.disabled = false;
+                  var temp = [OId1,OId2,OId3];
+                  var item = temp[Math.floor(Math.random()*temp.length)]
+                  alert(item.value);
+                  item.disabled = false;
+
+                  document.getElementById("option_D").onclick = function () {
+                  validateAnswer(OId4);
+                  }
+
+                  item.onclick = function () {
+                  validateAnswer(item);
+              }
+       }
+
+    }
     function DoubleDip() {
       var btn = document.getElementById("DoubleDip");
       document.cookie = "DoubleDip=false";
@@ -238,7 +326,7 @@
   <title>KENTCOM-Game Page</title>
 </head>
 
-<body onload="checkflip(); checkDouble();">
+<body onload="checkflip(); checkDouble(); checkEvenSteven()">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">

@@ -44,6 +44,25 @@ def gamerule():
 
 @get('/congrats')
 def congrats():
+    session = bottle.request.environ.get('beaker.session')
+    game_user = session.get('game_user')
+    if game_user is None:
+        return redirect("/")
+    
+    conn = sqlite3.connect('./Database/princess.db')
+    
+    #get userid from DB
+    c = conn.cursor()
+    c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
+    result = c.fetchall()
+    c.close()
+    global userid, rows
+    for row in result:
+        userid = row[0]
+    c = conn.cursor()
+    c.execute("DELETE FROM GameHistory where UserID = ?",(userid,))
+    conn.commit()
+    c.close()
     output = template('congrats.tpl')
     return output
 
@@ -228,7 +247,7 @@ def contactus():
     return output
 
 @get('/signin')
-def contactus():
+def signin():
     output = template('signin.tpl')
     return output
 
