@@ -318,11 +318,15 @@
           window.location.replace("https://kentcom.pythonanywhere.com/gameover");
       }
   }
+  document.oncontextmenu = document.body.oncontextmenu = function()
+  {
+    return false;
+  }
   </script>
   <title>KENTCOM-Game Page</title>
 </head>
 
-<body onload="checkflip(); checkDouble(); checkEvenSteven()">
+<body onload="checkflip(); checkDouble(); checkEvenSteven()" oncontextmenu="return false;">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
