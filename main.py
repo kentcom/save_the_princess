@@ -48,9 +48,9 @@ def congrats():
     game_user = session.get('game_user')
     if game_user is None:
         return redirect("/")
-    
+
     conn = sqlite3.connect('./Database/princess.db')
-    
+
     #get userid from DB
     c = conn.cursor()
     c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
@@ -74,7 +74,7 @@ def selectLevelQuestion(level, userid):
         return redirect("/")
     conn = sqlite3.connect('./Database/princess.db')
     c = conn.cursor()
-
+    qid = 1;
     c.execute("select QuestionID from Questions where GameLevel=? and QuestionID NOT IN (select QuestionID from GameHistory where UserID = ?) ORDER BY random() LIMIT 1", (level,userid,))
     result = c.fetchall()
     for row in result:
@@ -113,9 +113,9 @@ def gamepage(qid=1):
     game_user = session.get('game_user')
     if game_user is None:
         return redirect("/")
-    
+
     conn = sqlite3.connect('./Database/princess.db')
-    
+
     #get userid from DB
     c = conn.cursor()
     c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
@@ -135,7 +135,7 @@ def gamepage(qid=1):
         qid = selectLevelQuestion('MidLevel', userid)
     else:
         qid = selectLevelQuestion('HighLevel', userid)
-    
+
     c = conn.cursor()
     c.execute("select Q.QuestionID,Q.Question,group_concat(O.Options_value) as Options_value, (select Options_value from Options WHERE OptionID = A.CorrectOptionID and QuestionID = Q.QuestionID) AS CorrectOption from Questions Q , Options O, Answers A where Q.QuestionID=O.QuestionID and Q.QuestionID=A.QuestionID and Q.QuestionID=? GROUP BY Q.Question",(qid,))
 
@@ -221,9 +221,9 @@ def gameover():
     game_user = session.get('game_user')
     if game_user is None:
         return redirect("/")
-    
+
     conn = sqlite3.connect('./Database/princess.db')
-    
+
     #get userid from DB
     c = conn.cursor()
     c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
@@ -236,8 +236,8 @@ def gameover():
     c.execute("DELETE FROM GameHistory where UserID = ?",(userid,))
     conn.commit()
     c.close()
-    
-    
+
+
     output = template('gameover.tpl')
     return output
 
