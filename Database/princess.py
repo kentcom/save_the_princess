@@ -23,10 +23,10 @@ conn.execute("CREATE TABLE Options (OptionID char(100)    , QuestionID INTEGER, 
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (1,'Which insect inspired the term computer bug?','EntryLevel')")
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (2,'Which of these U.S. presidents appeared on the television series LaughIn ? ','EntryLevel')")
-conn.execute ("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (3,'which of the following landlocked countries is entirely contained within another country?', 'EntryLevel')")
+conn.execute ("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (3,'Which of the following landlocked countries is entirely contained within another country?', 'EntryLevel')")
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (4,'who is credited with inventing the first mass produced helicopter?','MidLevel')")
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (5,'What letter must appear at the beginning of the registration number of all non-military aircraft in the U.S.?','MidLevel')")
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (6,'Who did artist Grant Wood use as the model for the farmer in his classic painting an American Gothic?','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (6,'Who did artist Grant Wood use as the model for the farmer in his classic painting an American Gothic?','MidLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (7,'The U.S. icon Uncle Sam was based on Samuel Wilson,who worked during the war of 1812 as a what?','MidLevel')")
 
@@ -45,7 +45,7 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (13,'W
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (14,'Which American state is nicknamed The Diamond State?','EntryLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (15,'In these series, you will be looking at both the letter pattern and the number pattern.Fill the blank in the middle of the series or end of the series?' , 'MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (15,'In these series, you will be looking at both the letter pattern and the number pattern.Fill the blank in the middle of the series or end of the series ELFA,GLHA,ILJA,_,MLNA ?' , 'MidLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (16,'Who is the only American president elected unopposed?','MidLevel')")
 
@@ -60,7 +60,7 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (20,'W
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (21,'Who did the USA buy the Virgin Islands from?' , 'MidLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (22,'What is the staple food of one third of the world’s population?','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (22,'What is the staple food of one third of the worlds population?','MidLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (23,'Who said COMPUTERS ARE USELESS THEY ONLY GIVE YOU ANSWERS?','HighLevel')")
 
@@ -70,21 +70,21 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (25,'C
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (26,'In the UK 60% of pets have what?','MidLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (27,'Which of these games might start with one kid saying, “taking care of business” and other saying “baking carrot biscuits”?' , 'MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (27,'Which of these games might start with one kid saying, TAKING CARE OF BUSINESS and other saying BAKING CARROT BISCUITS?' , 'MidLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (28,'I PITY THE FOOL is a catchphrase of which famous American?','EntryLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (29,'Denny’s restaurants offer a signature breakfast dish names after what sports team?','HighLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (29,'Denny''s restaurants offer a signature breakfast dish names after what sports team?','HighLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (30,'How many U.S states have names that begin with the word “New”? ',  'EntryLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (30,'How many U.S states have names that begin with the word NEW? ',  'EntryLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (31,'Slightly inebriated is a common definition for which of these words?','MidLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (32,'What is the most chosen name for US school’s sports teams?','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (32,'What is the most chosen name for US school''s sports teams?','MidLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (33,'Which profession drinks the most coffee?' , 'MidLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (34,'Which duo has won seven Oscars?','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (34,'Which duo has won seven Oscars?','HighLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (35,'Linus Torvalds invented and wrote what?','HighLevel')")
 
@@ -111,8 +111,6 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (45,'W
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (46,'If you divide 30 by half and add ten, what do you get?','EntryLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (47,'If a monkey, a squirrel, and a bird are racing to the top of a coconut tree, who will get the banana first?','MidLevel')")
-
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (48,'In these series, you will be looking at both the letter pattern and the number pattern. Fill the blank in the middle of the series or end of the series. ELFA,GLHA,ILJA,_,MLNA','MidLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (49,'Complete the series. 9 = 4, 21 = 9, 22 = 9, 24 = 10, 8 = 5, 7 = 5, 99 = 10, 100 = 7, 16 = ?,17 =?','MidLevel')")
 
@@ -331,8 +329,8 @@ conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A'
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',34,'Yogi Bear and Boo Boo')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',34,'Itchy and Scratchy')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',34,'Road Runner and Wiley Coyote')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',35,'Linux Computer Operating System')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',35,'Mac Operating System')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',35,'Linux OS')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',35,'Mac OS')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',35,'Kernel')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',35,'Ubuntu')")
 
@@ -356,7 +354,7 @@ conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D'
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',40,'Provide Evidence')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',40,'Find Bugs')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',40,'Find Issues')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',40,'All The Above Options')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',40,'All The Above')")
 
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',41,'10')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',41,'20')")
@@ -452,11 +450,11 @@ conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (36,'A')")
 conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (37,'A')")
 conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (38,'D')")
 conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (39,'C')")
-conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (40,'B')")
-conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (41,'D')")
-conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (42,'B')")
-conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (43,'D')")
-conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (44,'A')")
+conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (40,'D')")
+conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (41,'B')")
+conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (42,'D')")
+conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (43,'B')")
+conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (44,'D')")
 conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (45,'A')")
 conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (46,'B')")
 conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (47,'D')")
