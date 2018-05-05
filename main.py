@@ -65,10 +65,10 @@ def selectLevelQuestion(level, userid):
     return qid
 
 
-def addToHistoryTable(userID, questionID):
+def addToHistoryTable(userID, questionID, status):
     conn = sqlite3.connect('./Database/princess.db')
     c = conn.cursor()
-    c.execute("INSERT INTO GameHistory values(?, ?)",(userID, questionID,))
+    c.execute("INSERT INTO GameHistory values(?, ?, ?)",(userID, questionID, status,))
     conn.commit()
     c.close()
 
@@ -76,7 +76,7 @@ def addToHistoryTable(userID, questionID):
 def retrieveHistoryTable(userID):
     conn = sqlite3.connect('./Database/princess.db')
     c = conn.cursor()
-    c.execute("SELECT count(QuestionID) from GameHistory where UserID=?",(userID,))
+    c.execute("SELECT count(QuestionID) from GameHistory where UserID=? and Status = 1",(userID,))
     result = c.fetchall()
     c.close()
     global rowCount
@@ -167,7 +167,7 @@ def validateAnswer():
             userid = row[0]
 
         if CorrectOption == selectedOption:
-            addToHistoryTable(userid, questionID)
+            addToHistoryTable(userid, questionID, 1)
             return HTTPResponse(status=200)
         else:
             return HTTPResponse(status=500)
@@ -179,8 +179,20 @@ def flipbutton():
     try:
         session = bottle.request.environ.get('beaker.session')
         questionID = session.get('questionID')
+        game_user = session.get('game_user')
+
+        #get userid from DB
+        conn = sqlite3.connect('./Database/princess.db')
+        c = conn.cursor()
+        c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
+        result = c.fetchall()
+        c.close()
+        global userid
+        for row in result:
+            userid = row[0]
+
         print("Flip button called",questionID)
-        addToHistoryTable(userid, questionID)
+        addToHistoryTable(userid, questionID, 0)
     except ValueError:
         return HTTPResponse(status=500)
 
