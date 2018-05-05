@@ -26,7 +26,7 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (2,'Wh
 conn.execute ("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (3,'Which of the following landlocked countries is entirely contained within another country?', 'MidLevel')")
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (4,'who is credited with inventing the first mass produced helicopter?','MidLevel')")
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (5,'What letter must appear at the beginning of the registration number of all non-military aircraft in the U.S.?','MidLevel')")
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (6,'Who did artist Grant Wood use as the model for the farmer in his classic painting an American Gothic?','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (6,'Who did artist Grant Wood use as the model for the farmer in his classic painting an American Gothic?','MidLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (7,'The U.S. icon Uncle Sam was based on Samuel Wilson,who worked during the war of 1812 as a what?','MidLevel')")
 
@@ -342,7 +342,7 @@ conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D'
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',48,'7,7')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',48,'7,9')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',48,'9,7')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',48'9.9')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',48,'9.9')")
 
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',49,'I')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',49,'T')")
