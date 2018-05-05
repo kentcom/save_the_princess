@@ -28,7 +28,7 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (4,'wh
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (5,'What letter must appear at the beginning of the registration number of all non-military aircraft in the U.S.?','MidLevel')")
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (6,'Who did artist Grant Wood use as the model for the farmer in his classic painting an American Gothic?','MidLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (7,'The U.S. icon Uncle sam was based on samuel wilson,who worked during the war of 1812 as a what?','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (7,'The U.S. icon Uncle Sam was based on Samuel Wilson,who worked during the war of 1812 as a what?','MidLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (8,'Which of the following men does not have a chemical element named after him?','MidLevel')")
 
@@ -112,7 +112,7 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (46,'I
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (47,'If a monkey, a squirrel, and a bird are racing to the top of a coconut tree, who will get the banana first?','MidLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (48,'In these series, you will be looking at both the letter pattern and the number pattern. Fill the blank in the middle of the series or end of the series.','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (48,'In these series, you will be looking at both the letter pattern and the number pattern. Fill the blank in the middle of the series or end of the series. ELFA,GLHA,ILJA,_,MLNA','MidLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (49,'Complete the series. 9 = 4, 21 = 9, 22 = 9, 24 = 10, 8 = 5, 7 = 5, 99 = 10, 100 = 7, 16 = ?,17 =?','MidLevel')")
 
