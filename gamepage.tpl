@@ -362,7 +362,7 @@
       <div class="row">
         <div class="col-md-1">
           <img src="Images\bmw-h.png" class="img-fluid bannerDesktop" alt="Responsive" style="width:100%; height:100%">
-          <img src="Images\bmw-v.png" class="img-fluid bannerMobile" alt="Responsive" style="width:100%; height:100%">
+          <img src="Images\bmw-v.png" class="img-fluid bannerMobile" alt="Responsive">
         </div>
         <div class="col-md-7">
           <div class="row">
@@ -450,7 +450,7 @@
         </div>
         <div class="col-md-1">
           <img src="Images\bmw-h.png" class="img-fluid bannerDesktop" alt="Responsive" style="width:100%; height:100%">
-          <img src="Images\bmw-v.png" class="img-fluid bannerMobile" alt="Responsive" style="width:100%; height:100%">
+          <img src="Images\bmw-v.png" class="img-fluid bannerMobile" alt="Responsive">
         </div>
       </div>
     </div>
