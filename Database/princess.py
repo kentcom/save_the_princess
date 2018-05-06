@@ -45,7 +45,7 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (13,'W
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (14,'Which American state is nicknamed The Diamond State?','EntryLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (15,'In these series, you will be looking at both the letter pattern and the number pattern.Fill the blank in the middle of the series or end of the series ELFA,GLHA,ILJA,_,MLNA ?' , 'MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (15,'In these series, you will be looking at both the letter pattern and the number pattern.Fill the blank in the middle of the series or end of the series SCD,TEF,UGH,_,WKL ?' , 'MidLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (16,'Who is the only American president elected unopposed?','MidLevel')")
 
@@ -74,7 +74,7 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (27,'W
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (28,'I PITY THE FOOL is a catchphrase of which famous American?','EntryLevel')")
 
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (29,'Denny''s restaurants offer a signature breakfast dish names after what sports team?','HighLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (29,'Denny''s restaurants offer a signature breakfast dish named after which of the following ?','HighLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (30,'How many U.S states have names that begin with the word NEW? ',  'EntryLevel')")
 
@@ -117,6 +117,24 @@ conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (48,'C
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (49,'Which letter in English alphabet we drink?','MidLevel')")
 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (50,'How many trailing zeros are in the number 5! (5 factorial)?','EntryLevel')")
+
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (51,'What are the figures seen occasionally on Googles homepage, commemorating special events,called?','EntryLevel')")
+
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (52,'Which one of these is not a 21st century invention?','MidLevel')")
+
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (53,'Which of these social networking sites has a bird as its logo?','EntryLevel')")
+
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (54,'In Soccer which of these players wears a different color jersey, from the rest of the team, onthe field?','MidLevel')")
+
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (55,'On which river did Chesley Sullenberger land US Airways Flight 1549 on January 15, 2009?','EntryLevel')")
+
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (56,'Which of the following is the Fastest land animal in the world?','MidLevel')")
+
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (57,'When was World Wide We invented?','EntryLevel')")
+
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (58,'What type of software is free to try but then you must buy?','MidLevel')")
+
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (59,'DO NO EVIL is tag line of which of the following?','EntryLevel')")
 
 
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',1,'Moth')")
@@ -339,10 +357,10 @@ conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B'
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',47,'Squirrel')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',47,'None')")
 
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',48,'7,7')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',48,'7,9')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',48,'9,7')")
-conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',48,'9.9')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',48,'7 7')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',48,'7 9')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',48,'9 7')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',48,'9 9')")
 
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',49,'I')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',49,'T')")
@@ -353,6 +371,51 @@ conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A'
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',50,'2')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',50,'3')")
 conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',50,'None')")
+
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',51,'Snap')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',51,'Meme')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',51,'Mascot')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',51,'Doodle')")
+
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',52,'iPhone')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',52,'Google')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',52,'Skype')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',52,'YouTube')")
+
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',53,'Snapchat')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',53,'Tumblr')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',53,'Twitter')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',53,'WhatsApp')")
+
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',54,'Forward')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',54,'GoalKeeper')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',54,'Defender')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',54,'Midfielder')")
+
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',55,'Hudson River')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',55,'Delaware River')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',55,'Niagara River')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',55,'Susquehanna River')")
+
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',56,'Zebra')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',56,'Cheetah')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',56,'Tiger')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',56,'Lion')")
+
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',57,'1974')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',57,'1982')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',57,'1991')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',57,'1999')")
+
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',58,'Commercial')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',58,'Shareware')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',58,'Opensource')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',58,'Microsoft World')")
+
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('A',59,'Google')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('B',59,'Facebook')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('C',59,'Amazon')")
+conn.execute("Insert into Options(OptionID,QuestionID,Options_value) values ('D',59,'Apple')")
 
 conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (1,'A')")
 conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (2,'B')")
@@ -397,14 +460,22 @@ conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (40,'D')")
 conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (41,'B')")
 conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (42,'D')")
 conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (43,'B')")
-conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (44,'D')")
+conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (44,'A')")
 conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (45,'A')")
 conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (46,'B')")
 conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (47,'D')")
 conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (48,'B')")
 conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (49,'B')")
 conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (50,'A')")
-
+conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (51,'D')")
+conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (52,'B')")
+conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (53,'C')")
+conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (54,'B')")
+conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (55,'A')")
+conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (56,'B')")
+conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (57,'C')")
+conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (58,'B')")
+conn.execute("Insert into Answers(QuestionID,CorrectOptionID) values (59,'A')")
 
 conn.execute("insert into User (EmailAddress,CurrentGameLevel) values ('eg46shrsr@gmail.com','Entrylevel')")
 conn.execute("insert into User (EmailAddress,CurrentGameLevel) values ('gxhxjyj@gmail.com','MidLevel')")
