@@ -1,35 +1,93 @@
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" type="text/css">
   <title>KENTCOM-Home Page</title>
   <link href ="CSS/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <header>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        &nbsp;
+      </div>
+    </div>
     <div class = "row">
-      <div class = "logo">
-        <img src="Images\logo2.png">
+      <div class = "col-md-1">
+        <img src="Images\logo2.png" class ="logo">
       </div>
-      <ul class ="main-nav">
-        <li><a href="vision">KENTCOM</a></li>
-        <li><a href="signin">SIGN IN</a></li>
-        <li><a href="contactus">CONTACT US</a></li>
-      </ul>
-    </div>
-    <div class = "title">
-      <h1> SAVE THE PRINCESS</h1>
-        <div class="buttonclass">
-        <a href="gamelore" class ="btn btn-lore"> Game Lore </a>
-        <a href="gamerule" class ="btn btn-rules"> Game Rules </a>
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-2">
+        <ul class ="main-nav text-right">
+          <li> <a href="vision">KENTCOM</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <ul class ="main-nav text-right">
+          <li><a href="signin">START GAME</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <ul class ="main-nav text-right">
+          <li><a href="contactus">CONTACT US</a></li>
+        </ul>
+      </div>
+      <div class="col-md-1">
       </div>
     </div>
-</header>
-<script type="text/javascript">
-  ( function() {
-    if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [1] }; };
-    var unit = {"calltype":"async[2]","publisher":"kentcom2018","width":728,"height":90,"sid":"Chitika Default"};
-    var placement_id = window.CHITIKA.units.length;
-    window.CHITIKA.units.push(unit);
-    document.write('<div id="chitikaAdBlock-' + placement_id + '" style="position: fixed;bottom: 0;width: 100%;"></div>');
-}());
-</script>
-<script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+    <div class="row">
+      <div class="col-md-12">
+        &nbsp;
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        &nbsp;
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        &nbsp;
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        &nbsp;
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        &nbsp;
+      </div>
+    </div>
+    <div class = "row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-6">
+        <h1 class="title"> SAVE THE PRINCESS</h1>
+      </div>
+      <div class="col-md-5">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        &nbsp;
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        &nbsp;
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <a href="gamelore" class ="btn btn-main btn-lore btn-lg btn-block font-weight-bold" style="font-size:25px;"> Game Lore </a>
+      </div>
+      <div class="col-md-2">
+        <a href="gamerule" class ="btn btn-main btn-rules btn-lg btn-block font-weight-bold" style="font-size:25px;"> Game Rules </a>
+      </div>
+      <div class="col-md-7"></div>
+    </div>
+  </div>
 </body>
