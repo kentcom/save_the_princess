@@ -74,7 +74,7 @@ def selectLevelQuestion(level, userid):
         return redirect("/")
     conn = sqlite3.connect('./Database/princess.db')
     c = conn.cursor()
-    qid = 1;
+    qid = 1
     c.execute("select QuestionID from Questions where GameLevel=? and QuestionID NOT IN (select QuestionID from GameHistory where UserID = ?) ORDER BY random() LIMIT 1", (level,userid,))
     result = c.fetchall()
     for row in result:
@@ -128,13 +128,14 @@ def gamepage(qid=1):
     print("UserID = " + str(userid))
     rows = retrieveHistoryTable(userid)
 
-    qid = selectLevelQuestion('EntryLevel', userid)
+    level = 'EntryLevel'
     if(rows < 2):
-        qid = selectLevelQuestion('EntryLevel', userid)
+        level = 'EntryLevel'
     elif(rows < 6):
-        qid = selectLevelQuestion('MidLevel', userid)
+        level = 'MidLevel'
     else:
-        qid = selectLevelQuestion('HighLevel', userid)
+        level = 'HighLevel'
+    qid = selectLevelQuestion(level, userid)
 
     c = conn.cursor()
     c.execute("select Q.QuestionID,Q.Question,group_concat(O.Options_value) as Options_value, (select Options_value from Options WHERE OptionID = A.CorrectOptionID and QuestionID = Q.QuestionID) AS CorrectOption from Questions Q , Options O, Answers A where Q.QuestionID=O.QuestionID and Q.QuestionID=A.QuestionID and Q.QuestionID=? GROUP BY Q.Question",(qid,))
