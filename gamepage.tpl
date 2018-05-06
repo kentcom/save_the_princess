@@ -56,9 +56,10 @@
                   else if({{rows1}}==3)
                   {
                       swal({
-                          title: "Bravo!!!!",
-                          text: "It is going to be exciting now onwards!! You have completed 4 Levels",
+                          title: "Demon!!",
+                          text: "You are doing better than I Expected.",
                           allowOutsideClick: false,
+                          imageUrl: 'Images/Demon.png',
                           allowEscapeKey: false,
                           showCancelButton: false,
                           confirmButtonColor: '#3085d6',
@@ -77,6 +78,7 @@
                           title: "WARRIOR TO DEMON:",
                           text: "I will save my Princess, I shall die trying to save my kingdom's pride!!",
                           allowOutsideClick: false,
+                          imageUrl: 'Images/Nerd.png',
                           allowEscapeKey: false,
                           showCancelButton: false,
                           confirmButtonColor: '#3085d6',
@@ -96,6 +98,7 @@
                           title: "WARRRIOR TO DEMON:",
                           text: "You cannot defeat my kingdom, I will make my King Proud!!",
                           allowOutsideClick: false,
+                          imageUrl: 'Images/Nerd.png',
                           allowEscapeKey: false,
                           showCancelButton: false,
                           confirmButtonColor: '#3085d6',
@@ -115,6 +118,7 @@
                           title: "DEMON......!!!!",
                           text: "You are smart indeed, this next question is everything I have..!!",
                           allowOutsideClick: false,
+                          imageUrl: 'Images/Demon.png',
                           allowEscapeKey: false,
                           showCancelButton: false,
                           confirmButtonColor: '#3085d6',
@@ -167,6 +171,18 @@
       var OId2 = document.getElementById("option_B");
       var OId3 = document.getElementById("option_C");
       var OId4 = document.getElementById("option_D");
+
+swal({
+        title: "Good Choice.",
+        text: "Now two options will disappear and have to select either one of the remaining.",
+        type: "info",
+        showCancelButton: false,
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'Continue',
+        animation: "slide-from-top",
+        dangerMode: true,
+    })
+
 
       OId1.disabled = true;
       OId2.disabled = true;
@@ -250,6 +266,19 @@
       var OId2 = document.getElementById("option_B");
       var OId3 = document.getElementById("option_C");
       var OId4 = document.getElementById("option_D");
+
+
+swal({
+        title: "Good Choice.",
+        text: "Now you get two times to answer the same question.",
+        type: "info",
+        showCancelButton: false,
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'Continue',
+        animation: "slide-from-top",
+        dangerMode: true,
+    })
+
 
       var i = 0;
 
