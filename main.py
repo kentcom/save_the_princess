@@ -63,6 +63,10 @@ def congrats():
     c.execute("DELETE FROM GameHistory where UserID = ?",(userid,))
     conn.commit()
     c.close()
+
+    session.invalidate()
+    session.delete()
+
     output = template('congrats.tpl')
     return output
 
@@ -105,6 +109,21 @@ def retrieveHistoryTable(userID):
     print("Total questions Answered = " + str(rowCount))
     return rowCount
 
+def checkHistoryTable(userID, questionID):
+    conn = sqlite3.connect('./Database/princess.db')
+    c = conn.cursor()
+    c.execute("SELECT count(QuestionID) from GameHistory where UserID=? and questionID = ?",(userID,questionID,))
+    result = c.fetchall()
+    c.close()
+    rowCount = 0
+    if(result != None):
+        for row in result:
+            rowCount = int(row[0])
+    if(rowCount > 0):
+        return True
+    else:
+        return False
+
 
 @get('/gamepage')
 def gamepage(qid=1):
@@ -128,14 +147,28 @@ def gamepage(qid=1):
     print("UserID = " + str(userid))
     rows = retrieveHistoryTable(userid)
 
-    level = 'EntryLevel'
-    if(rows < 2):
-        level = 'EntryLevel'
-    elif(rows < 6):
-        level = 'MidLevel'
+    questionID = session.get('questionID')
+    if questionID is not None:
+        if(checkHistoryTable(userid, questionID)):
+            level = 'EntryLevel'
+            if(rows < 2):
+                level = 'EntryLevel'
+            elif(rows < 6):
+                level = 'MidLevel'
+            else:
+                level = 'HighLevel'
+            qid = selectLevelQuestion(level, userid)
+        else:
+            qid = questionID
     else:
-        level = 'HighLevel'
-    qid = selectLevelQuestion(level, userid)
+        level = 'EntryLevel'
+        if(rows < 2):
+            level = 'EntryLevel'
+        elif(rows < 6):
+            level = 'MidLevel'
+        else:
+            level = 'HighLevel'
+        qid = selectLevelQuestion(level, userid)
 
     c = conn.cursor()
     c.execute("select Q.QuestionID,Q.Question,group_concat(O.Options_value) as Options_value, (select Options_value from Options WHERE OptionID = A.CorrectOptionID and QuestionID = Q.QuestionID) AS CorrectOption from Questions Q , Options O, Answers A where Q.QuestionID=O.QuestionID and Q.QuestionID=A.QuestionID and Q.QuestionID=? GROUP BY Q.Question",(qid,))
@@ -240,7 +273,8 @@ def gameover():
     c.execute("DELETE FROM GameHistory where UserID = ?",(userid,))
     conn.commit()
     c.close()
-
+    
+    session['questionID'] = None
 
     output = template('gameover.tpl')
     return output
