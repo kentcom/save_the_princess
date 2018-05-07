@@ -4,12 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" type= "text/css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" type="text/css">
 	<link rel="stylesheet" type="text/css" href="CSS/gamelore.css">
     <title>KentCom- Game Lore</title>
   </head>
   <body>
-    <header>
     <ul class="card-header">SAVE THE PRINCESS GAME LORE
               <li><a href="main">HOME</a></li>
       </ul>
@@ -20,47 +19,47 @@
            <li>
              <figure class ="photo">
 
-               <img hspace= "10" src="Images\lore\scene1.png">
+               <img hspace= "115" src="Images\lore\scene1.png">
              </figure>
            </li>
            <li>
              <figure class ="photo">
-               <img hspace = "55" src="Images\lore\scene2.png">
+               <img hspace = "145" src="Images\lore\scene2.png">
              </figure>
            </li>
            <li>
              <figure class ="photo">
-               <img hspace = "95" src="Images\lore\scene3.png">
+               <img hspace = "165" src="Images\lore\scene3.png">
              </figure>
            </li>
            <li>
              <figure class ="photo">
-               <img hspace = "10" vspace = "50" src="Images\lore\scene4.png">
+               <img hspace = "115" vspace = "50" src="Images\lore\scene4.png">
              </figure>
            </li>
            <li>
              <figure class ="photo">
-               <img hspace = "55" vspace = "50" src="Images\lore\scene5.png">
+               <img hspace = "145" vspace = "50" src="Images\lore\scene5.jpg">
              </figure>
            </li>
            <li>
              <figure class ="photo">
-               <img hspace = "95" vspace = "50"  src="Images\lore\scene6.png">
+               <img hspace = "165" vspace = "50"  src="Images\lore\scene6.png">
              </figure>
            </li>
            <li>
              <figure class ="photo">
-               <img hspace = "10" vspace = "10" src="Images\lore\scene7.png">
+               <img hspace = "115" vspace = "10" src="Images\lore\scene7.png">
              </figure>
            </li>
            <li>
                <figure class ="photo">
-               <img hspace = "55" vspace= "10" src="Images\lore\scene8.png">
+               <img hspace = "145" vspace= "10" src="Images\lore\scene8.png">
                </figure>
            </li>
            <li>
                <figure class ="photo">
-               <img hspace = "95" vspace= "10" src="Images\lore\scene9.png">
+               <img hspace = "165" vspace= "10" src="Images\lore\scene9.jpg">
                </figure>
            </li>
          </ul>
@@ -70,7 +69,6 @@
 
 
       </div>
-  </header>
         </ul>
   </div>
 </nav>

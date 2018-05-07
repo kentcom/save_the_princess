@@ -5,7 +5,7 @@ from beaker.middleware import SessionMiddleware
 
 session_opts = {
     'session.type': 'file',
-    'session.cookie_expires': 600,
+    'session.cookie_expires': 3600,
     'session.data_dir': './data',
     'session.auto': True
 }

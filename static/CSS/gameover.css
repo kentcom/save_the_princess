@@ -1,61 +1,58 @@
-*
+body
 {
-  margin:0;
-  padding:0;
+  background-image:linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)),url('../Images/gameover.jpg');
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
 }
-
-body{
-  font-family: tahoma;
+.logo
+{
+  height: 90px;
 }
 .title
 {
-  position:absolute;
-  width : 1140px;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  color:white;
+  font-weight: bolder;
 }
-html {
-  background: linear-gradient(rgba(0,0,0,0.4),rgba(1,0,0,0.4)),url('../Images/go.gif') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-.logo img{
-  height :100px;
-  float: left;
-  margin-top:-34%;
-
-}
-
-.btn
+.main-nav
 {
-  border :1px solid #e67e22;
-  padding :10px 30px;
+  list-style: none;
+}
+.main-nav li
+{
+  display: inline-block;
+}
+.main-nav li a
+{
   color: #e67e22;
   text-decoration: none;
-  border-radius: 10px;
-  margin-left: 10%;
+  font-weight: bolder;
+  font-size: larger;
 }
-.buttonclass
+.main-nav li a:hover
 {
-  margin-top:35%;
-  font-size: 28px;
-  }
-h1{
-  color: white;
-  font-size: 20px;
-  align: center;
+  color: #e67e22;
+  border-bottom: 2px solid  #e67e22;
+  transition: all 0.5s ease-in;
+  padding: 0px 0px 15px 0px;
 }
-.btn-quit:hover
+.btn-main
+{
+  border :1px solid #e67e22;
+  color: #e67e22;
+  text-decoration: none;
+  border-radius: 22px;
+}
+
+.btn-lore:hover
 {
   background-color:#e67e22;
   color: white;
   transition: all 1.2s ease-in;
 }
 
-.btn-startagain:hover
+.btn-rules:hover
 {
   background-color: #e67e22;
   color: white;

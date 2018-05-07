@@ -14,7 +14,7 @@
           <a href="main">HOME</a>
         </li>
         <li>
-          <a href="signin">SIGN IN</a>
+          <a href="signin">START GAME</a>
         </li>
       </ul>
     </div>

@@ -1,10 +1,9 @@
 
-header{
+body{
   background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../Images/test1.jpg);
   background-position: center;
   background-size: cover;
   height: 200vh;
-
   }
   .card-header
   {
