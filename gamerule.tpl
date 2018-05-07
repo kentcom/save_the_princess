@@ -28,10 +28,7 @@
         <br>
       </div>
       <div class="parttwo">
-        During the game, the warrior will face up to 10 different hurdles (i.e;questions) to Save The Princess. The level of hurdles
-        increases as the warrior tries to get closer to save the princess.Hurdles consist of multiple choice with four possible
-        options provided (labelled A, B, C and D) and the warrior must choose the correct one to proceed to next hurdle.Once
-        the hurdle is displayed the warrior can take up to five different actions which will be described below:
+        During the game, the warrior will face up to 10 different hurdles (i.e. questions) to Save The Princess. The level of hurdles increases as the warrior tries to get closer to save the princess. Hurdles consist of multiple choice with four possible options provided (labeled A, B, C, and D) and the warrior must choose the correct one to proceed to next hurdle. Once the hurdle is displayed the warrior can take up to five different actions which will be described below:
         <br>
         <br>
       </div>
@@ -45,15 +42,12 @@
       </div>
       <br>
       <div class="partfour"> Clear the hurdle:</div>
-      <br> If the warrior answer the question correctly, then he clears the current hurdle and moves to the next hurdle in attempt
-      to save the princess.
+      <br> If the warrior answers the question correctly, then he clears the current hurdle and moves to the next hurdle in the attempt to save the princess.
       <br>
       <br>
 
       <div class="partfive">Even-Steven:</div>
-      <br> The warrior will have an lifeline "Even-Steven" where he can use it once in a game. In this lifeline, two of the choices
-      are eliminated and then the contestant has a choice of selecting one of the two remaining choices one of which is the
-      correct answer choice.
+      <br> The warrior will have a lifeline "Even-Steven" where he can use it once in a game. In this lifeline, two of the choices are eliminated and then the contestant has a choice of selecting one of the two remaining choices one of which is the correct answer choice.
       <br>
       <br>
 
@@ -63,7 +57,7 @@
       <br>
 
       <div class="partseven">Double Dip:</div>
-      <br> If the warrior is in a dilemma , then they can go for the “Double Dip” lifeline, where a warrior can choose two guesses.
+      <br> If the warrior is in a dilemma, then they can go for the “Double Dip” lifeline, where a warrior can choose two guesses.
       <br>
       <br>
 
