@@ -24,7 +24,7 @@ conn.execute("CREATE TABLE Options (OptionID char(100)    , QuestionID INTEGER, 
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (1,'Which insect inspired the term computer bug?','EntryLevel')")
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (2,'Which of these U.S. presidents appeared on the television series LaughIn ? ','MidLevel')")
 conn.execute ("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (3,'Which of the following landlocked countries is entirely contained within another country?', 'MidLevel')")
-conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (4,'who is credited with inventing the first mass produced helicopter?','MidLevel')")
+conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (4,'Who is credited with inventing the first mass produced helicopter?','MidLevel')")
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (5,'What letter must appear at the beginning of the registration number of all non-military aircraft in the U.S.?','MidLevel')")
 conn.execute("INSERT into Questions(QuestionID,Question,GameLevel) VALUES (6,'Who did artist Grant Wood use as the model for the farmer in his classic painting an American Gothic?','MidLevel')")
 
