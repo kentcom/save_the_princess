@@ -68,7 +68,7 @@
             </div>
             <ul class="main-nav">
                 <li>
-                    <a href="main">Home Page</a>
+                    <a href="main">Home</a>
                 </li>
             </ul>
         </div>
