@@ -11,7 +11,7 @@
     }
   </script>
 </head>
-<body>
+<body onload="deleteCookie();">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
