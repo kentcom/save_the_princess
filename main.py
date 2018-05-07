@@ -56,7 +56,7 @@ def congrats():
     c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
     result = c.fetchall()
     c.close()
-    global userid, rows
+    userid = ""
     for row in result:
         userid = row[0]
     c = conn.cursor()
@@ -98,7 +98,6 @@ def retrieveHistoryTable(userID):
     c.execute("SELECT count(QuestionID) from GameHistory where UserID=? and Status = 1",(userID,))
     result = c.fetchall()
     c.close()
-    global rowCount
     rowCount = 0
     if(result != None):
         for row in result:
@@ -121,7 +120,8 @@ def gamepage(qid=1):
     c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
     result = c.fetchall()
     c.close()
-    global userid, rows
+    userid = ""
+    rows = 0
     for row in result:
         userid = row[0]
 
@@ -142,7 +142,10 @@ def gamepage(qid=1):
 
     result = c.fetchall()
     c.close()
-    global questionID, question, option, correctOption
+    questionID = ""
+    question = ""
+    option = ""
+    correctOption = ""
     for row in result:
         questionID = row[0]
         session['questionID'] = questionID
@@ -172,7 +175,7 @@ def validateAnswer():
         result = c.fetchall()
         c.close()
         print(str(dict_data['selectedAnswer']))
-        global CorrectOption
+        CorrectOption = ""
         for row in result:
             CorrectOption = row[1]
         selectedOption = str(dict_data['selectedAnswer'])
@@ -182,7 +185,7 @@ def validateAnswer():
         c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
         result = c.fetchall()
         c.close()
-        global userid
+        userid = ""
         for row in result:
             userid = row[0]
 
@@ -207,7 +210,7 @@ def flipbutton():
         c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
         result = c.fetchall()
         c.close()
-        global userid
+        userid = ""
         for row in result:
             userid = row[0]
 
@@ -230,7 +233,7 @@ def gameover():
     c.execute("SELECT UserID from User WHERE EmailAddress = ?",(game_user,))
     result = c.fetchall()
     c.close()
-    global userid, rows
+    userid = ""
     for row in result:
         userid = row[0]
     c = conn.cursor()
